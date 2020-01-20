@@ -2619,6 +2619,8 @@ VALID_CATEGORIES+= accessibility afterstep arabic archivers astro audio \
 	x11 x11-clocks x11-drivers x11-fm x11-fonts x11-servers x11-themes \
 	x11-toolkits x11-wm xfce zope base
 
+VALID_CATEGORIES+= dynfi
+
 check-categories:
 .for cat in ${CATEGORIES}
 .	if empty(VALID_CATEGORIES:M${cat})

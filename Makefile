@@ -14,6 +14,7 @@ SUBDIR += databases
 SUBDIR += deskutils
 SUBDIR += devel
 SUBDIR += dns
+SUBDIR += dynfi
 SUBDIR += editors
 SUBDIR += emulators
 SUBDIR += finance

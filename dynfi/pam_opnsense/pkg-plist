@@ -1,0 +1,7 @@
+etc/pam.d/opnsense-login
+lib/libpam_opnsense.a
+lib/libpam_opnsense_p.a
+lib/pam_opnsense.so
+libexec/opnsense-pam
+man/man8/opnsense-login.8.gz
+sbin/opnsense-login
