@@ -740,6 +740,7 @@ opnsense/service/templates/OPNsense/IDS/+TARGETS
 opnsense/service/templates/OPNsense/IDS/OPNsense.rules
 opnsense/service/templates/OPNsense/IDS/classification.config
 opnsense/service/templates/OPNsense/IDS/custom.yaml.sample
+opnsense/service/templates/OPNsense/IDS/custom.yaml
 opnsense/service/templates/OPNsense/IDS/newsyslog.conf
 opnsense/service/templates/OPNsense/IDS/rc.conf.d
 opnsense/service/templates/OPNsense/IDS/reference.config

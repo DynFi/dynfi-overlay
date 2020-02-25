@@ -2,7 +2,7 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	19.7.8
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=	
@@ -101,5 +101,6 @@ post-install:
 	${CP} ${STAGEDIR}/${LOCALBASE}/etc/config.xml.sample ${STAGEDIR}/${LOCALBASE}/etc/config.xml
 	${CP} ${STAGEDIR}/${LOCALBASE}/etc/bogons.sample ${STAGEDIR}/${LOCALBASE}/etc/bogons
 	${CP} ${STAGEDIR}/${LOCALBASE}/etc/bogonsv6.sample ${STAGEDIR}/${LOCALBASE}/etc/bogonsv6
+	${CP} ${STAGEDIR}/${LOCALBASE}/opnsense/service/templates/OPNsense/IDS/custom.yaml.sample ${STAGEDIR}/${LOCALBASE}/opnsense/service/templates/OPNsense/IDS/custom.yaml
 
 .include <bsd.port.mk>
