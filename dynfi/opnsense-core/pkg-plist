@@ -66,6 +66,7 @@ etc/inc/xmlrpc/test.inc
 etc/ipsec.opnsense.d/README
 etc/ipsec.secrets.opnsense.d/README
 etc/netflow.conf.example
+etc/newsyslog.conf.d/dynfi.conf
 etc/pkg/fingerprints/OPNsense/revoked/opnsense-update.deciso.com.20160725
 etc/pkg/fingerprints/OPNsense/revoked/opnsense-update.deciso.com.20170721
 etc/pkg/fingerprints/OPNsense/revoked/pkg.opnsense.org.20150402
