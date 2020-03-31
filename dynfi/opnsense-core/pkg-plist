@@ -2163,3 +2163,10 @@ www/widgets/widgets/thermal_sensors.widget.php
 www/widgets/widgets/traffic_graphs.widget.php
 www/wizard.php
 www/xmlrpc.php
+opnsense/mvc/app/controllers/OPNsense/Firewall/forms/geoIPSettings.xml
+opnsense/service/templates/OPNsense/Auth/motd.in
+opnsense/service/templates/OPNsense/Filter/filter_geoip.conf
+opnsense/service/templates/OPNsense/Syslog/syslog-ng.conf.in
+opnsense/www/headerbuttons.php
+opnsense/www/themes/dynfi/build/images/default-logo.svg
+opnsense/www/themes/dynfi/build/images/icon-logo.svg
