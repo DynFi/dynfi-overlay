@@ -2,23 +2,16 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	19.7.10
-PORTREVISION=	5
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
-DISTFILES=	
+DISTFILES=
 
 MAINTAINER=	manu@FreeBSD.org
-
-LICENSE=	BSD2CLAUSE
 COMMENT=	OPNsense Core package
 
-USES=	python:3.7 php:flavors shebangfix
-USE_PHP=	curl zlib sockets
+LICENSE=	BSD2CLAUSE
 
-SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
-		src/opnsense/scripts/systemhealth/activity.py \
-		src/opnsense/scripts/systemhealth/flush_rrd.py \
-		src/opnsense/scripts/systemhealth/listReports.py
+IGNORE_WITH_PHP=	73 74
 
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		choparp>=0:net-mgmt/choparp \
@@ -84,10 +77,18 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}phpseclib>=0:dynfi/phpseclib \
 		openssl>=0:security/openssl
 
+USES=	python:3.7 php:flavors shebangfix
+USE_PHP=	curl zlib sockets
+
+SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
+		src/opnsense/scripts/systemhealth/activity.py \
+		src/opnsense/scripts/systemhealth/flush_rrd.py \
+		src/opnsense/scripts/systemhealth/listReports.py
+
 MAKE_ENV+=	VERSION=${PORTVERSION}
 
 do-extract:
-	mkdir -p ${WRKSRC}
+	${MKDIR} ${WRKSRC}
 .if defined(PORTREVISION)
 	tar xzf ${FILESDIR}/${PORTNAME}-${PORTVERSION}-${PORTREVISION}.tgz -C ${WRKSRC}
 .else
@@ -96,6 +97,9 @@ do-extract:
 
 do-build:
 	(cd ${WRKSRC} && make install DESTDIR=${STAGEDIR} FLAVOUR=OpenSSL VERSION=${PORTVERSION})
+
+post-stage:
+	(cd ${STAGEDIR} && find ./ -name \+TARGETS -delete)
 
 post-install:
 	${CP} ${STAGEDIR}/${LOCALBASE}/etc/config.xml.sample ${STAGEDIR}/${LOCALBASE}/etc/config.xml
