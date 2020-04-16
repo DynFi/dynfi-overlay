@@ -2,6 +2,7 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	19.7.10
+PORTREVISION=	1
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -97,9 +98,6 @@ do-extract:
 
 do-build:
 	(cd ${WRKSRC} && make install DESTDIR=${STAGEDIR} FLAVOUR=OpenSSL VERSION=${PORTVERSION})
-
-post-stage:
-	(cd ${STAGEDIR} && find ./ -name \+TARGETS -delete)
 
 post-install:
 	${CP} ${STAGEDIR}/${LOCALBASE}/etc/config.xml.sample ${STAGEDIR}/${LOCALBASE}/etc/config.xml
