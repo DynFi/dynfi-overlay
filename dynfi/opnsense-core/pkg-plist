@@ -228,6 +228,8 @@ opnsense/mvc/app/controllers/OPNsense/Cron/ItemController.php
 opnsense/mvc/app/controllers/OPNsense/Cron/forms/dialogEdit.xml
 opnsense/mvc/app/controllers/OPNsense/DFM/IndexController.php
 opnsense/mvc/app/controllers/OPNsense/DFM/forms/settings.xml
+opnsense/mvc/app/controllers/OPNsense/DFM/Api/ServiceController.php
+opnsense/mvc/app/controllers/OPNsense/DFM/Api/SettingsController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/ActivityController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/ActivityController.php
 opnsense/mvc/app/controllers/OPNsense/Diagnostics/Api/DnsController.php
