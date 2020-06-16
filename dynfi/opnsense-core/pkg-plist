@@ -458,6 +458,15 @@ opnsense/mvc/app/models/OPNsense/TrafficShaper/TrafficShaper.php
 opnsense/mvc/app/models/OPNsense/TrafficShaper/TrafficShaper.xml
 opnsense/mvc/app/models/OPNsense/Unbound/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/Unbound/Menu/Menu.xml
+opnsense/mvc/app/models/OPNsense/CaptivePortal/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Core/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Dnsmasq/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/IDS/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Monit/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Ntpd/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Proxy/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/TrafficShaper/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Unbound/Menu/Buttons.xml
 opnsense/mvc/app/views/OPNsense/CaptivePortal/clients.volt
 opnsense/mvc/app/views/OPNsense/CaptivePortal/index.volt
 opnsense/mvc/app/views/OPNsense/CaptivePortal/vouchers.volt
