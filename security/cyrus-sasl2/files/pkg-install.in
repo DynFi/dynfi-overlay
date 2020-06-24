@@ -20,10 +20,6 @@ create_sasldb() {
 	dbname=$(echo %%SASLDB_NAME%% | sed 's/\.db//')
 	if [ ! -f ${SASLDB_NAME} ]; then
 		mkdir -p ${PKG_PREFIX}/etc
-		echo ${SASLDB_NAME}
-		echo "${SASLDB_PATH}/${dbname}"
-		echo "test" | ${PKG_PREFIX}/sbin/saslpasswd2 -f ${SASLDB_PATH}/sasldb2.db -p -c ${CYRUS_USER}
-		ls -l ${PKG_PREFIX}/etc/
 		if [ `${PKG_PREFIX}/sbin/sasldblistusers2 -f ${SASLDB_PATH}/${dbname} | wc -l` -eq 0 ] ; then
                         echo "WARNING: Failed to create ${SASLDB_NAME}"
                 else
