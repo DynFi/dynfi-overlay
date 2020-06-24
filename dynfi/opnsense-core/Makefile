@@ -76,7 +76,12 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}sqlite3>=0:databases/${PHP_PKGNAMEPREFIX}sqlite3 \
 		${PHP_PKGNAMEPREFIX}xml>=0:textproc/${PHP_PKGNAMEPREFIX}xml \
 		${PHP_PKGNAMEPREFIX}phpseclib>=0:dynfi/phpseclib \
-		openssl>=0:security/openssl
+		openssl>=0:security/openssl \
+		redis>=0:databases/redis \
+		zerotier>=0:net/zerotier \
+		clamav>=0:security/clamav \
+		smart>=0:sysutils/smart \
+		c-icap>=0:www/c-icap
 
 USES=	python:3.7 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
