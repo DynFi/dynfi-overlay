@@ -2184,15 +2184,3 @@ www/widgets/widgets/thermal_sensors.widget.php
 www/widgets/widgets/traffic_graphs.widget.php
 www/wizard.php
 www/xmlrpc.php
-share/locale/cs_CZ/LC_MESSAGES/DynFiFirewall.mo
-share/locale/de_DE/LC_MESSAGES/DynFiFirewall.mo
-share/locale/es_ES/LC_MESSAGES/DynFiFirewall.mo
-share/locale/fr_FR/LC_MESSAGES/DynFiFirewall.mo
-share/locale/it_IT/LC_MESSAGES/DynFiFirewall.mo
-share/locale/ja_JP/LC_MESSAGES/DynFiFirewall.mo
-share/locale/no_NO/LC_MESSAGES/DynFiFirewall.mo
-share/locale/pt_BR/LC_MESSAGES/DynFiFirewall.mo
-share/locale/pt_PT/LC_MESSAGES/DynFiFirewall.mo
-share/locale/ru_RU/LC_MESSAGES/DynFiFirewall.mo
-share/locale/tr_TR/LC_MESSAGES/DynFiFirewall.mo
-share/locale/zh_CN/LC_MESSAGES/DynFiFirewall.mo
