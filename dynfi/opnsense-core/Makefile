@@ -2,7 +2,7 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	19.7.10
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -13,6 +13,8 @@ COMMENT=	OPNsense Core package
 LICENSE=	BSD2CLAUSE
 
 IGNORE_WITH_PHP=	73 74
+
+OPNSENSE_PORT_REV=	6
 
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		choparp>=0:net-mgmt/choparp \
@@ -80,7 +82,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		redis>=0:databases/redis \
 		zerotier>=0:net/zerotier \
 		clamav>=0:security/clamav \
-		smart>=0:sysutils/smart \
 		c-icap>=0:www/c-icap
 
 USES=	python:3.7 php:flavors shebangfix
@@ -95,8 +96,8 @@ MAKE_ENV+=	VERSION=${PORTVERSION}
 
 do-extract:
 	${MKDIR} ${WRKSRC}
-.if defined(PORTREVISION)
-	tar xzf ${FILESDIR}/${PORTNAME}-${PORTVERSION}-${PORTREVISION}.tgz -C ${WRKSRC}
+.if defined(OPNSENSE_PORT_REV)
+	tar xzf ${FILESDIR}/${PORTNAME}-${PORTVERSION}-${OPNSENSE_PORT_REV}.tgz -C ${WRKSRC}
 .else
 	tar xzf ${FILESDIR}/${PORTNAME}-${PORTVERSION}.tgz -C ${WRKSRC}
 .endif
