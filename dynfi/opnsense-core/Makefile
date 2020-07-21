@@ -2,7 +2,7 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	19.7.10
-PORTREVISION=	8
+PORTREVISION=	9
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -82,7 +82,8 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		redis>=0:databases/redis \
 		zerotier>=0:net/zerotier \
 		clamav>=0:security/clamav \
-		c-icap>=0:www/c-icap
+		c-icap>=0:www/c-icap \
+		c-icap-modules>=0:www/c-icap-modules
 
 USES=	python:3.7 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
