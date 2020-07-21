@@ -35,7 +35,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		ntp>=0:net/ntp \
 		openssh-portable>=0:security/openssh-portable \
 		openvpn>=0:security/openvpn \
-		opnsense-lang>=0:dynfi/opnsense-lang \
 		opnsense-update>=0:dynfi/opnsense-update \
 		pam_opnsense>=0:dynfi/pam_opnsense \
 		pftop>=0:sysutils/pftop \
