@@ -42,6 +42,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		rate>=0:net-mgmt/rate \
 		rrdtool>=0:databases/rrdtool \
 		samplicator>=0:net/samplicator \
+		smartctl>=0:sysutils/smartmontools \
 		squid>=0:www/squid \
 		sshlockout_pf>=0:dynfi/sshlockout_pf \
 		strongswan>=0:security/strongswan \
