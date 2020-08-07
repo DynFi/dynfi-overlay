@@ -2312,5 +2312,5 @@ www/widgets/widgets/thermal_sensors.widget.php
 www/widgets/widgets/traffic_graphs.widget.php
 www/wizard.php
 www/xmlrpc.php
-opnsense/service/templates/OPNsense/WebGui/etc.php.ini.link
-opnsense/service/templates/OPNsense/WebGui/lib.php.ini.link
+opnsense/service/templates/OPNsense/WebGui/etc.php.ini
+opnsense/service/templates/OPNsense/WebGui/lib.php.ini
