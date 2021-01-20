@@ -125,7 +125,6 @@ etc/rc.syshook.d/early/10-configd
 etc/rc.syshook.d/early/15-templates
 etc/rc.syshook.d/early/20-backup
 etc/rc.syshook.d/early/90-carp
-etc/rc.syshook.d/early/98_carp_maintenance
 etc/rc.syshook.d/monitor/10-dpinger
 etc/rc.syshook.d/start/10-newwanip
 etc/rc.syshook.d/start/20-freebsd
@@ -545,7 +544,6 @@ opnsense/mvc/app/views/layout_partials/base_menu_system.volt
 opnsense/mvc/app/views/layout_partials/base_tabs_content.volt
 opnsense/mvc/app/views/layout_partials/base_tabs_header.volt
 opnsense/mvc/app/views/layout_partials/form_input_tr.volt
-opnsense/mvc/app/views/layout_partials/sample_input_field.volt
 opnsense/mvc/app/views/layouts/default.volt
 opnsense/mvc/app/views/OPNsense/CaptivePortal/clients.volt
 opnsense/mvc/app/views/OPNsense/CaptivePortal/index.volt
@@ -746,7 +744,6 @@ opnsense/scripts/suricata/lib/__init__.py
 opnsense/scripts/suricata/lib/metadata.py
 opnsense/scripts/suricata/lib/rulecache.py
 opnsense/scripts/suricata/listAlertLogs.py
-opnsense/scripts/suricata/listClasstypes.py
 opnsense/scripts/suricata/listInstallableRulesets.py
 opnsense/scripts/suricata/metadata/rules/et-open.xml
 opnsense/scripts/suricata/metadata/rules/opnsense.xml
@@ -1776,11 +1773,9 @@ opnsense/www/js/bootstrap-select.js
 opnsense/www/js/bootstrap-select.min.js
 opnsense/www/js/d3.min.js
 opnsense/www/js/d3.min.js.LICENSE
-opnsense/www/js/jquery-3.2.1.min.js
 opnsense/www/js/jquery-3.4.1.min.js
 opnsense/www/js/jquery.bootgrid.js
 opnsense/www/js/jquery.bootgrid.LICENSE
-opnsense/www/js/jquery-migrate-3.0.1.min.js
 opnsense/www/js/jquery.qrcode.js
 opnsense/www/js/jquery.qrcode.js.LICENSE
 opnsense/www/js/jquery-sortable.js
@@ -2134,7 +2129,6 @@ www/diag_ipsec_spd.php
 www/diag_logs_cicap.php
 www/diag_logs_clamav.php
 www/diag_logs_common.inc
-www/diag_logs_filter_summary.php
 www/diag_logs_settings.php
 www/diag_packet_capture.php
 www/diag_pf_info.php
@@ -2212,7 +2206,6 @@ www/services_unbound_overrides.php
 www/services_unbound.php
 www/status_dhcp_leases.php
 www/status_dhcpv6_leases.php
-www/status_graph.php
 www/status_habackup.php
 www/status_interfaces.php
 www/status_ntpd.php
@@ -2445,7 +2438,6 @@ opnsense/service/templates/OPNsense/Syslog/local/suricata.conf
 opnsense/service/templates/OPNsense/Syslog/local/vpn.conf
 opnsense/service/templates/OPNsense/Syslog/local/wireless.conf
 opnsense/service/templates/OPNsense/Syslog/syslog-ng-config-events.conf
-opnsense/service/templates/OPNsense/Syslog/syslog-ng.conf.in
 opnsense/service/templates/OPNsense/Syslog/syslog-ng-local.conf
 opnsense/service/templates/OPNsense/Syslog/syslog-ng-lockout.conf
 opnsense/service/templates/OPNsense/Unbound/core/blacklists.conf
