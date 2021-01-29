@@ -4,7 +4,8 @@ PORTNAME=	opnsense-core
 PORTVERSION=	20.7.8
 PORTREVISION=	1
 CATEGORIES=	dynfi
-PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
+#PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
+PKGNAMEPREFIX=	php74-
 DISTFILES=
 
 MAINTAINER=	manu@FreeBSD.org
@@ -66,7 +67,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}dom>=0:textproc/${PHP_PKGNAMEPREFIX}dom \
 		${PHP_PKGNAMEPREFIX}filter>=0:security/${PHP_PKGNAMEPREFIX}filter \
 		${PHP_PKGNAMEPREFIX}gettext>=0:devel/${PHP_PKGNAMEPREFIX}gettext \
-		${PHP_PKGNAMEPREFIX}hash>=0:security/${PHP_PKGNAMEPREFIX}hash \
 		${PHP_PKGNAMEPREFIX}json>=0:devel/${PHP_PKGNAMEPREFIX}json \
 		${PHP_PKGNAMEPREFIX}ldap>=0:net/${PHP_PKGNAMEPREFIX}ldap \
 		${PHP_PKGNAMEPREFIX}pecl-mcrypt>=0:security/pecl-mcrypt \
