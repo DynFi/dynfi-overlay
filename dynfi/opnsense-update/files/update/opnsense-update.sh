@@ -45,7 +45,7 @@ KERNELDIR="/boot/kernel"
 TEE="/usr/bin/tee -a"
 PRODUCT="Dynfi"
 PKG="pkg-static"
-RELEASE="21.1.5"
+RELEASE="20.7.8"
 
 PENDINGDIR="${WORKPREFIX}/.sets.pending"
 PIPEFILE="${WORKPREFIX}/.upgrade.pipe"
@@ -110,21 +110,17 @@ mirror_abi()
 		DIR="snapshots"
 	fi
 
-	# The first part after ABI is our suffix and
-	# we need all of it to find the correct sets.
-
-	MIRROR=$(sed -n 's/'"${URL_KEY}"'\"pkg\+\(.*\/${ABI}\/\)\([^\/]*\)\/.*/\1'"${DIR}"'/p' ${ORIGIN})
-	if [ -z "${MIRROR}" ]; then
-		echo "Mirror read failed." >&2
-		exit 1
-	fi
-
 	ABI=$(opnsense-verify -a)
 	if [ -n "${DO_ABI}" ]; then
 		ABI=${DO_ABI#"-a "}
 	fi
 
-	eval MIRROR="${MIRROR}"
+	PMIRROR=$(sed -n 's/[[:space:]]*url:[[:space:]]\"\(.*\)\",/\1/p' ${ORIGIN} | sed 's/${ABI}//')
+	eval MIRROR="${PMIRROR}${ABI}"
+	if [ -z "${MIRROR}" ]; then
+		echo "Mirror read failed." >&2
+		exit 1
+	fi
 
 	echo "${MIRROR}"
 }
