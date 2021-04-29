@@ -1,0 +1,135 @@
+.\"
+.\" Copyright (c) 2016-2019 Franco Fichtner <franco@opnsense.org>
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\"
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\"
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd February 25, 2019
+.Dt OPNSENSE-PATCH 8
+.Os
+.Sh NAME
+.Nm opnsense-patch
+.Nd OPNsense patch utility
+.Sh SYNOPSIS
+.Nm
+.Op Fl defiN
+.Op Fl c Ar repo_default
+.Ar commit_hash ...
+.Nm
+.Op Fl defiN
+.Op Fl a Ar account
+.Op Fl p Ar patch_level
+.Op Fl r Ar repository
+.Op Fl s Ar site
+.Ar commit_hash ...
+.Nm
+.Fl l
+.Sh DESCRIPTION
+The
+.Nm
+utility treats all arguments as upstream
+.Xr git 1
+repository commit hashes, downloads them with
+.Xr fetch 1
+and finally applies them in order using
+.Xr patch 1 .
+.Pp
+After successful apply the browser cache will be invalidated,
+but the system may still need manual interaction to make the
+changes functional.
+A reboot is the cleanest option if there are no immediate
+results visible.
+.Pp
+Patches can also be reversed by reapplying them, but multiple
+patches must be given in reverse order to succeed.
+.Pp
+A preprocess run will remove repository meta data file changes
+and only keep file modifications inside the
+.Pa src
+directory.
+A postprocess run will retain file permissions which are stored
+inside a special format in
+.Xr git 1
+patches.
+.Pp
+The options are as follows:
+.Bl -tag -width ".Fl c Ar repo_default" -offset indent
+.It Fl a Ar account
+Set the
+.Ar account
+name of the fetch URL.
+.It Fl c Ar repo_default
+Use the preconfigured repository and patch level.
+The known options are
+.Sq plugins
+and
+.Sq core
+.Pq default .
+.It Fl d
+Download the requested patch, but do not apply it.
+.It Fl e
+Remove all patches stored in the cache directory.
+Note this will ignore the
+.Sq Fl r
+option and instead delete patches from all repositories immediately.
+.It Fl f
+Force a fetch of the patch to be applied even when it is
+already stored in the cache directory.
+.It Fl i
+Insecure mode trusts the remote patch origin.
+.It Fl l
+List all patches stored in the cache directory.
+.It Fl N
+Do not reverse patches.
+Similar to
+.Xr patch 1
+.Sq Fl N
+mode.
+.It Fl p Ar patch_level
+Set the
+.Sq Fl p
+argument of
+.Xr patch 1
+to the respective value.
+.It Fl r Ar repository
+Set the
+.Ar repository
+name of the fetch URL.
+.It Fl s Ar site
+Set the
+.Ar site
+of the fetch URL.
+.El
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /var/cache/opnsense-patch
+The local cache storage directory.
+.El
+.Sh EXIT STATUS
+.Ex -std
+.Sh SEE ALSO
+.Xr fetch 1 ,
+.Xr git 1 ,
+.Xr patch 1
+.Sh AUTHORS
+.An Franco Fichtner Aq Mt franco@opnsense.org

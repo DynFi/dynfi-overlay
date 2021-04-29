@@ -1,0 +1,262 @@
+.\"
+.\" Copyright (c) 2015-2021 Franco Fichtner <franco@opnsense.org>
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\"
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\"
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.Dd January 29, 2021
+.Dt OPNSENSE-UPDATE 8
+.Os
+.Sh NAME
+.Nm opnsense-update
+.Nd OPNsense update utility
+.Sh SYNOPSIS
+.Nm
+.Op Fl BbdefikPpRsuVvz
+.Op Fl a Ar abi
+.Op Fl D Ar device
+.Op Fl l Ar directory
+.Op Fl m Ar mirror_url
+.Op Fl n Ar mirror_dir
+.Op Fl N Ar crypto_lib
+.Op Fl r Ar release
+.Op Fl t Ar type
+.Nm
+.Op Fl cf Op Fl bkp
+.Nm
+.Op Fl LSTU Op Fl bkp
+.Nm
+.Fl M
+.Sh DESCRIPTION
+The
+.Nm
+utility offers combined kernel and base system upgrades using
+remotely fetched binary sets, as well as package upgrades via
+.Xr pkg 8 .
+.Pp
+Options
+.Sq Fl b ,
+.Sq Fl k ,
+.Sq Fl p
+and
+.Sq Fl t
+may be stacked to create selective updates.
+The default is
+.Sq Fl bkp ,
+attempting to update all installed components at once using
+a minor upgrade sequence.
+.Pp
+Major upgrades are invoked using
+.Sq Fl u
+instead.
+.Pp
+The options are as follows:
+.Bl -tag -width ".Fl m Ar mirror_url" -offset indent
+.It Fl a Ar abi
+Change the
+.Ar abi
+from the detected default to a specific value.
+This does not affect
+.Sq Fl p .
+.It Fl B
+Execute single-step base system upgrade after use of
+.Sq Fl u .
+Implies
+.Sq Fl f .
+.It Fl b
+Select the base system.
+.It Fl c
+Check whether a set update can be performed, but do not install it.
+When using
+.Sq Fl p ,
+the major upgrade hint file is checked for existence only.
+.It Fl D Ar device
+Device type for the kernel to be loaded.
+If unset it is automatically detected.
+.It Fl d
+Restore the repository defaults.
+.It Fl e
+Empty the cache directory.
+.It Fl f
+Force an update even when the latest release is already installed.
+.It Fl i
+Ignore the signature verification result.
+Otherwise, the
+.Xr opnsense-verify 8
+utility is used to verify a set signature.
+The default is off meaning secure, unless the package mirror
+configuration does not use fingerprints.
+.It Fl k
+Select the kernel.
+.It Fl L
+Lock a set to avoid updates.
+The lock will be stripped by
+.Sq Fl U
+or
+.Sq Fl u ,
+and ingored temporarily by
+.Sq Fl f .
+.It Fl l Ar directory
+Instead of downloading, point to a local directory where sets are located.
+.It Fl M
+Return the full release URL of the selected mirror.
+.It Fl m Ar mirror_url
+Change the set fetch and package location to
+.Ar mirror .
+.It Fl N Ar crypto_lib
+When using
+.Sq Fl up ,
+the cryptographic library may be specified.
+Possible values are
+.Sq OpenSSL
+or
+.Sq LibreSSL .
+The value
+.Sq Base
+is reserved for future use.
+.It Fl n Ar mirror_dir
+Change the mirror directory to
+.Ar mirror_dir .
+.It Fl P
+Execute single-step packages upgrade after use of
+.Sq Fl u .
+Implies
+.Sq Fl f .
+.It Fl p
+Select the packages.
+.It Fl R
+Select the major release from the upgrade hint file if found.
+Otherwise,
+.Sq unknown
+is used to signify the hint is missing and the major update
+cannot be reached.
+.It Fl r Ar release
+Select the
+.Ar release
+to be installed.
+Package upgrades are unaffected by this option when not using
+.Sq Fl u .
+.It Fl s
+Skip update phase; useful in conjunction with
+.Sq Fl m
+and
+.Sq Fl n .
+.It Fl S
+Return the download size of the requested remote set.
+.It Fl T
+Probe the lock status of the requested set,
+exiting with an error if the respective set is locked.
+.It Fl t Ar type
+Switch to the release package
+.Ar type ,
+properly handling the
+.Xr pkg 8
+.Sq vital
+flag transition.
+The
+.Xr opnsense-version 8
+utility is used to test which version is currently installed.
+.It Fl U
+Unlock a set to allow updates.
+Sets are generally unlocked unless
+.Sq Fl L
+was used.
+.It Fl u
+Invoke the major upgrade if known or set manually using
+.Sq Fl r Ar release .
+In order to finish the upgrade,
+.Sq Fl B
+and
+.Sq Fl P
+must be invoked in this particular order, accompanied by a reboot
+after each individual step.
+.It Fl V
+Set debug mode for shell script output.
+.It Fl v
+Print the latest set version.
+.It Fl z
+Use the snapshot directory to fetch sets regardless of what is
+currently configured in the repository file.
+This does not affect
+.Sq Fl p .
+.El
+.Sh FILES
+.Bl -tag -width Ds
+.It Pa /usr/local/etc/pkg/repos/OPNsense.conf
+The
+.Xr pkg.conf 5
+file used to configure the packages mirror.
+The file is rewritten in case of
+.Sq Fl d ,
+.Sq Fl m
+or
+.Sq Fl n .
+.It Pa /usr/local/opnsense/firmware-upgrade
+This file contains a hint at the major release and will be
+automatically read using
+.Sq Fl R
+and
+.Sq Fl u
+unless
+.Sq Fl r Ar release
+was given.
+.It Pa /usr/local/opnsense/version/base
+The file is used to check if a base system upgrade is necessary.
+It is embedded into the base set.
+.It Pa /usr/local/opnsense/version/base.lock
+The lock for preventing an update to the base system,
+operated by
+.Sq Fl \&Lb
+and
+.Sq Fl \&Ub .
+.It Pa /usr/local/opnsense/version/base.obsolete
+The file is used to list files to be removed after installation
+which are no longer required.
+It is embedded into the base set.
+.It Pa /usr/local/opnsense/version/core.lock
+The lock for preventing an update to all packages,
+operated by
+.Sq Fl \&Lp
+and
+.Sq Fl \&Up .
+.It Pa /usr/local/opnsense/version/kernel
+The file is used to check if a kernel upgrade is necessary.
+It is embedded into the kernel set.
+.It Pa /usr/local/opnsense/version/kernel.lock
+The lock for preventing updates to the kernel,
+operated by
+.Sq Fl \&Lk
+and
+.Sq Fl \&Uk .
+.It Pa /var/cache/opnsense-update
+The local cache storage directory.
+.El
+.Sh EXIT STATUS
+.Ex -std
+.Sh SEE ALSO
+.Xr pkg.conf 5 ,
+.Xr opnsense-verify 8 ,
+.Xr opnsense-version 8 ,
+.Xr pkg 8
+.Sh AUTHORS
+.An Franco Fichtner Aq Mt franco@opnsense.org

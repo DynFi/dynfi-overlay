@@ -3,8 +3,10 @@
 
 PORTNAME=	opnsense-update
 PORTVERSION=	21.1.5
-#PORTREVISION=	1 # GH_TAGNAME
 CATEGORIES=	sysutils
+MASTER_SITES=	#empty
+DISTFILES=	#none
+EXTRACT_ONLY=	#empty
 
 MAINTAINER=	franco@opnsense.org
 COMMENT=	OPNsense update utilities
@@ -17,9 +19,7 @@ USES=		ssl uidfix
 
 USE_HARDENING=	safestack
 
-USE_GITHUB=	yes
-GH_ACCOUNT=	opnsense
-GH_PROJECT=	update
-#GH_TAGNAME=	75b9a88
+do-extract:
+	${CP} -r ${FILESDIR} ${WRKSRC}
 
 .include <bsd.port.mk>
