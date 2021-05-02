@@ -499,7 +499,6 @@ if [ "${DO_PKGS}" = "-p" -a -z "${DO_UPGRADE}${DO_SIZE}" ]; then
 			# rerun sync before there are any complaints
 			${PKG} update ${DO_FORCE}
 		fi
-		${PKG} autoremove -y
 		${PKG} check -yda
 		${PKG} clean -ya
 	else
@@ -774,7 +773,6 @@ install_pkgs()
 		register_pkgs
 
 		${TEE} ${LOGFILE} < ${PIPEFILE} &
-		${PKG} autoremove -y > ${PIPEFILE} 2>&1
 		${TEE} ${LOGFILE} < ${PIPEFILE} &
 		${PKG} check -yda > ${PIPEFILE} 2>&1
 		${TEE} ${LOGFILE} < ${PIPEFILE} &
