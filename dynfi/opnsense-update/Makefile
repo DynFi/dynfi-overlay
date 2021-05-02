@@ -3,6 +3,7 @@
 
 PORTNAME=	opnsense-update
 PORTVERSION=	21.1.5
+PORTREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	#empty
 DISTFILES=	#none
