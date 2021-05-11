@@ -85,6 +85,21 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		c-icap>=0:www/c-icap \
 		c-icap-modules>=0:www/c-icap-modules
 
+LIB_DEPENDS=	DynFi-dpv>=0:install \
+		DynFi-libarchive>=0:install \
+		DynFi-libbegemot>=0:install \
+		DynFi-libbsdxml>=0:install \
+		DynFi-libbz2>=0:install \
+		DynFi-libdwarf>=0:install \
+		DynFi-libefivar>=0:install \
+		DynFi-libevent1>=0:install \
+		DynFi-liblzma>=0:install \
+		DynFi-libmagic>=0:install \
+		DynFi-libopie>=0:install \
+		DynFi-libsmb>=0:install \
+		DynFi-libucl>=0:install
+
+
 USES=	python:3.7 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
 
