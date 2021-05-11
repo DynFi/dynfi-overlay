@@ -83,21 +83,20 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		zerotier>=0:net/zerotier \
 		clamav>=0:security/clamav \
 		c-icap>=0:www/c-icap \
-		c-icap-modules>=0:www/c-icap-modules
-
-LIB_DEPENDS=	DynFi-dpv>=0:base/DynFi-dpv \
-		DynFi-libarchive>=0:base/DynFi-libarchive \
-		DynFi-libbegemot>=0:base/DynFi-libbegemot \
-		DynFi-libbsdxml>=0:base/DynFi-libbsdxml \
-		DynFi-libbz2>=0:base/DynFi-libbz2 \
-		DynFi-libdwarf>=0:base/DynFi-libdwarf \
-		DynFi-libefivar>=0:base/DynFi-libefivar \
-		DynFi-libevent1>=0:base/DynFi-libevent1 \
-		DynFi-liblzma>=0:base/DynFi-liblzma \
-		DynFi-libmagic>=0:base/DynFi-libmagic \
-		DynFi-libopie>=0:base/DynFi-libopie \
-		DynFi-libsmb>=0:base/DynFi-libsmb \
-		DynFi-libucl>=0:base/DynFi-libucl
+		c-icap-modules>=0:www/c-icap-modules \
+		DynFi-dpv>=0:base/DynFi-dpv:depends \
+		DynFi-libarchive>=0:base/DynFi-libarchive:depends \
+		DynFi-libbegemot>=0:base/DynFi-libbegemot:depends \
+		DynFi-libbsdxml>=0:base/DynFi-libbsdxml:depends \
+		DynFi-libbz2>=0:base/DynFi-libbz2:depends \
+		DynFi-libdwarf>=0:base/DynFi-libdwarf:depends \
+		DynFi-libefivar>=0:base/DynFi-libefivar:depends \
+		DynFi-libevent1>=0:base/DynFi-libevent1:depends \
+		DynFi-liblzma>=0:base/DynFi-liblzma:depends \
+		DynFi-libmagic>=0:base/DynFi-libmagic:depends \
+		DynFi-libopie>=0:base/DynFi-libopie:depends \
+		DynFi-libsmb>=0:base/DynFi-libsmb:depends \
+		DynFi-libucl>=0:base/DynFi-libucl:depends
 
 
 USES=	python:3.7 php:flavors shebangfix
