@@ -83,9 +83,8 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		zerotier>=0:net/zerotier \
 		clamav>=0:security/clamav \
 		c-icap>=0:www/c-icap \
-		c-icap-modules>=0:www/c-icap-modules
-
-LIB_DEPENDS=	DynFi-dpv>=0:install \
+		c-icap-modules>=0:www/c-icap-modules \
+		DynFi-dpv>=0:install \
 		DynFi-libarchive>=0:install \
 		DynFi-libbegemot>=0:install \
 		DynFi-libbsdxml>=0:install \
