@@ -85,20 +85,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		c-icap>=0:www/c-icap \
 		c-icap-modules>=0:www/c-icap-modules
 
-DEPENDS=	base/DynFi-dpv \
-		base/DynFi-libarchive \
-		base/DynFi-libbegemot \
-		base/DynFi-libbsdxml \
-		base/DynFi-libbz2 \
-		base/DynFi-libdwarf \
-		base/DynFi-libefivar \
-		base/DynFi-libevent1 \
-		base/DynFi-liblzma \
-		base/DynFi-libmagic \
-		base/DynFi-libopie \
-		base/DynFi-libsmb \
-		base/DynFi-libucl
-
 
 USES=	python:3.7 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
