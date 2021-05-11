@@ -83,8 +83,9 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		zerotier>=0:net/zerotier \
 		clamav>=0:security/clamav \
 		c-icap>=0:www/c-icap \
-		c-icap-modules>=0:www/c-icap-modules \
-		DynFi-dpv>=0:base/DynFi-dpv \
+		c-icap-modules>=0:www/c-icap-modules
+
+LIB_DEPENDS=	DynFi-dpv>=0:base/DynFi-dpv \
 		DynFi-libarchive>=0:base/DynFi-libarchive \
 		DynFi-libbegemot>=0:base/DynFi-libbegemot \
 		DynFi-libbsdxml>=0:base/DynFi-libbsdxml \
@@ -93,7 +94,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		DynFi-libefivar>=0:base/DynFi-libefivar \
 		DynFi-libevent1>=0:base/DynFi-libevent1 \
 		DynFi-liblzma>=0:base/DynFi-liblzma \
-		DynFi-libmagic>=0:base/ynFi-libmagic \
+		DynFi-libmagic>=0:base/DynFi-libmagic \
 		DynFi-libopie>=0:base/DynFi-libopie \
 		DynFi-libsmb>=0:base/DynFi-libsmb \
 		DynFi-libucl>=0:base/DynFi-libucl
