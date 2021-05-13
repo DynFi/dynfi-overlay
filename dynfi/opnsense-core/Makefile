@@ -85,20 +85,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		c-icap>=0:www/c-icap \
 		c-icap-modules>=0:www/c-icap-modules
 
-LIB_DEPENDS=	libdpv.so:base \
-		libarchive.so:base \
-		libbegemot.so:base \
-		libbsdxml.so:base \
-		libbz2.so:base \
-		libdwarf.so:base \
-		libefivar.so:base \
-		libevent1.so:base \
-		liblzma.so:base \
-		libmagic.so:base \
-		libopie.so:base \
-		libsmb.so:base \
-		libucl.so:base
-
 
 USES=	python:3.7 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
