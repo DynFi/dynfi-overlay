@@ -4,7 +4,7 @@
 PORTNAME=	opnsense-update
 PORTVERSION=	21.1.5
 PORTREVISION=	2
-CATEGORIES=	sysutils
+CATEGORIES=	dynfi
 MASTER_SITES=	#empty
 DISTFILES=	#none
 EXTRACT_ONLY=	#empty
