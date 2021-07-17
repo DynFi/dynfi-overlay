@@ -1,6 +1,8 @@
+# Created by: Patrick Tracanelli <eksffa@freebsdbrasil.com.br>
+# $FreeBSD$
+
 PORTNAME=	suricata
-DISTVERSION=	6.0.2
-PORTREVISION=	1
+DISTVERSION=	5.0.6
 CATEGORIES=	security
 MASTER_SITES=	https://www.openinfosecfoundation.org/download/
 
@@ -47,8 +49,6 @@ OPTIONS_RADIO=		SCRIPTS
 OPTIONS_RADIO_SCRIPTS=	LUA LUAJIT
 
 OPTIONS_SUB=		yes
-
-PRELUDE_BROKEN=		Compilation broken, see https://redmine.openinfosecfoundation.org/issues/4065
 
 GEOIP_DESC=		GeoIP support
 HYPERSCAN_DESC=		Hyperscan support
