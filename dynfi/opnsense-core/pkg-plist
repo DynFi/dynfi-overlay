@@ -149,7 +149,6 @@ opnsense/contrib/simplepie/build/header.txt
 opnsense/contrib/simplepie/compatibility_test/COMPATIBILITY README.txt
 opnsense/contrib/simplepie/compatibility_test/sp_compatibility_test.php
 opnsense/contrib/simplepie/composer.json
-opnsense/contrib/simplepie/.gitignore
 opnsense/contrib/simplepie/idn/idna_convert.class.php
 opnsense/contrib/simplepie/idn/LICENCE
 opnsense/contrib/simplepie/idn/npdata.ser
