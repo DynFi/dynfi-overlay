@@ -2,7 +2,7 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	20.7.8
-PORTREVISION=	17
+PORTREVISION=	18
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -86,7 +86,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		c-icap-modules>=0:www/c-icap-modules
 
 
-USES=	python:3.7 php:flavors shebangfix
+USES=	python:3.8 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
 
 SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
