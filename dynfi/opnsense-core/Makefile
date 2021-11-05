@@ -14,7 +14,7 @@ LICENSE=	BSD2CLAUSE
 
 IGNORE_WITH_PHP=	74 80
 
-OPNSENSE_PORT_REV=	17
+OPNSENSE_PORT_REV=	${PORTREVISION}
 
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		choparp>=0:net-mgmt/choparp \
