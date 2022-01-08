@@ -1,12 +1,7 @@
-# Created by: Franco Fichtner <franco@opnsense.org>
-# $FreeBSD$
-
 PORTNAME=	ifinfo
-PORTVERSION=	10.1
+PORTVERSION=	13.0
 CATEGORIES=	sysutils
-MASTER_SITES=	# empty
-DISTFILES=	# none
-EXTRACT_ONLY=	# empty
+DISTFILES=
 
 MAINTAINER=	franco@opnsense.org
 COMMENT=	Interface statistics reader
@@ -14,7 +9,7 @@ COMMENT=	Interface statistics reader
 LICENSE=	MIT
 
 USES=uidfix
-USE_HARDENING=	safestack
+MAKE_ENV=	BINDIR=${PREFIX}/sbin
 
 do-extract:
 	${CP} -r ${FILESDIR} ${WRKSRC}
