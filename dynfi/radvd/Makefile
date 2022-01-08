@@ -2,30 +2,34 @@
 # $FreeBSD$
 
 PORTNAME=	radvd
-PORTVERSION=	1.15
-PKGNAMESUFFIX=	1
+PORTVERSION=	2.19
+PORTREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.litech.org/radvd/dist/
 
-MAINTAINER=	franco@opnsense.org
+MAINTAINER=	farrokhi@FreeBSD.org
 COMMENT=	Linux/BSD IPv6 router advertisement daemon
 
-CONFLICTS_INSTALL=radvd
-
-LIB_DEPENDS=	libdaemon.so:devel/libdaemon
+LICENSE=	RADVD
+LICENSE_NAME=	RADVD License
+LICENSE_FILE=	${WRKSRC}/COPYRIGHT
+LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USE_HARDENING=	safestack
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--program-transform-name=
 USES=		gmake pkgconfig
+CONFIGURE_ARGS=	--program-transform-name=
 USE_RC_SUBR=	radvd
 
-PORTDOCS=	CHANGES-1 COPYRIGHT INTRO.html README TODO
+PORTDOCS=	CHANGES COPYRIGHT INTRO.html README TODO
+
+OPTIONS_DEFINE=	DOCS
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/radvd.conf.example ${STAGEDIR}${PREFIX}/etc
+	${INSTALL_DATA} ${WRKSRC}/radvd.conf.example ${STAGEDIR}${PREFIX}/etc/radvd.conf.sample
 	${INSTALL} -d ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${PORTDOCS:S.^.${WRKSRC}/.} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
+
