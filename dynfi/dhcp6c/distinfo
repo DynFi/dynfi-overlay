@@ -1,3 +1,4 @@
-TIMESTAMP = 1532101136
-SHA256 (opnsense-dhcp6c-v20180720_GH0.tar.gz) = 5bdbf4375921d540c26d5a836f65995a8d08616ec7ffc395c99febaacee40135
-SIZE (opnsense-dhcp6c-v20180720_GH0.tar.gz) = 156063
+TIMESTAMP = 1607432828
+SHA256 (opnsense-dhcp6c-v20200512-cff2641_GH0.tar.gz) = 416ca90bc0a1721b4f1fced45833d82bb65bdf15d7466194209fefd6c91d48f4
+SIZE (opnsense-dhcp6c-v20200512-cff2641_GH0.tar.gz) = 157372
+
