@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	opnsense-core
-PORTVERSION=	20.7.8
-PORTREVISION=	18
+PORTVERSION=	21.10.1
+PORTREVISION=	23
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -40,13 +40,12 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		opnsense-update>=0:dynfi/opnsense-update \
 		pam_opnsense>=0:dynfi/pam_opnsense \
 		pftop>=0:sysutils/pftop \
-		radvd1>=0:dynfi/radvd1 \
+		radvd>=0:dynfi/radvd \
 		rate>=0:net-mgmt/rate \
 		rrdtool>=0:databases/rrdtool \
 		samplicator>=0:net/samplicator \
 		smartmontools>=0:sysutils/smartmontools \
 		squid>=0:www/squid \
-		sshlockout_pf>=0:dynfi/sshlockout_pf \
 		strongswan>=0:security/strongswan \
 		sudo>=0:security/sudo \
 		suricata>=0:security/suricata \
@@ -60,7 +59,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ujson>=0:devel/py-ujson@${PY_FLAVOR} \
-		${PHP_PKGNAMEPREFIX}phalcon>=0:www/phalcon \
+		${PHP_PKGNAMEPREFIX}phalcon4>=0:www/phalcon4 \
 		${PHP_PKGNAMEPREFIX}pecl-radius>=0:net/pecl-radius \
 		${PHP_PKGNAMEPREFIX}ctype>=0:textproc/${PHP_PKGNAMEPREFIX}ctype \
 		${PHP_PKGNAMEPREFIX}dom>=0:textproc/${PHP_PKGNAMEPREFIX}dom \
