@@ -93,6 +93,7 @@ etc/pkg/fingerprints/OPNsense/trusted/opnsense-update.deciso.com.20180627
 etc/pkg/fingerprints/OPNsense/trusted/opnsense-update.deciso.com.20200122
 etc/pkg/fingerprints/OPNsense/trusted/pkg.opnsense.org.20200313
 etc/pkg/fingerprints/OPNsense/trusted/pkg.opnsense.org.20210629
+etc/pkg/fingerprints/ntop/trusted/packages.ntop.org.2022012501
 etc/rc
 etc/rc.bootup
 etc/rc.carp_service_status.d/.placeholder
@@ -2562,6 +2563,7 @@ www/xmlrpc.php
 @sample etc/dh-parameters.2048.sample
 @sample etc/dh-parameters.4096.sample
 @sample opnsense/service/templates/OPNsense/IDS/custom.yaml.sample
+etc/pkg/repos/ntop.conf.sample
 etc/pkg/repos/Dynfi.conf.sample
 etc/pkg/repos/FreeBSD.conf.sample
 etc/pkg/repos/OPNsense.conf.sample
