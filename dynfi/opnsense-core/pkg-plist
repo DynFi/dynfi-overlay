@@ -576,7 +576,6 @@ opnsense/mvc/app/models/OPNsense/DFConAg/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/DFConAg/DFConAg.php
 opnsense/mvc/app/models/OPNsense/DFConAg/DFConAg.xml
 opnsense/mvc/app/models/OPNsense/DFConAg/Menu/Buttons.xml
-opnsense/mvc/app/models/OPNsense/DFConAg/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/DFM/DFM.php
 opnsense/mvc/app/models/OPNsense/DFM/DFM.xml
 opnsense/mvc/app/models/OPNsense/DFM/Menu/Menu.xml
