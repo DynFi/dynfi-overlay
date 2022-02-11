@@ -41,6 +41,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		opnsense-update>=0:dynfi/opnsense-update \
 		pam_opnsense>=0:dynfi/pam_opnsense \
 		pftop>=0:sysutils/pftop \
+		iftop>=0:net-mgmt/iftop \
 		radvd>=0:dynfi/radvd \
 		rate>=0:net-mgmt/rate \
 		rrdtool>=0:databases/rrdtool \
