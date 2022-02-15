@@ -12,7 +12,7 @@ LICENSE=	BSD2CLAUSE
 RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		autossh>=0:security/autossh \
 		beep>=0:audio/beep \
-		intel-ix-kmod>=:net/intel-ix-kmod \
+		intel-ix-kmod>=0:net/intel-ix-kmod \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
 USES=   php:flavors
