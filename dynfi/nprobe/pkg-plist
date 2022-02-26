@@ -1,0 +1,6 @@
+etc/rc.d/nprobe
+etc/nprobe/nprobe.conf.sample
+bin/nprobe
+share/nprobe/geoip/dbip-asn-lite.mmdb
+share/nprobe/geoip/dbip-city-lite.mmdb
+share/nprobe/geoip/dbip-country-lite.mmdb
