@@ -36,7 +36,7 @@ echo "============="
 echo "PORTVERSION=${PKG_VERSION}"
 echo
 echo -n "RUN_DEPENDS= "
-echo "${PKG_INFO}" | jq -r '.deps | keys[] as $k | "\($k)>=0:\(.[$k] | .origin)"'
+echo "${PKG_INFO}" | jq -r '.deps | keys[] as $k | "\($k)>0:\(.[$k] | .origin)"'
 echo
 echo -n "COMMENT= "
 echo "${PKG_INFO}" | jq -r '.comment'

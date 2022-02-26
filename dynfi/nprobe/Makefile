@@ -8,11 +8,10 @@ PLIST=           ${.CURDIR}/pkg-plist
 
 
 PORTVERSION= 9.7.220226
-RUN_DEPENDS= json-c>=0:devel/json-c \
-	     libmaxminddb>=0:net/libmaxminddb \
-	     librdkafka>=0:net/librdkafka \
-	     libzmq4>=0:net/libzmq4 \
-
+RUN_DEPENDS= json-c>0:devel/json-c \
+	     libmaxminddb>0:net/libmaxminddb \
+	     librdkafka>0:net/librdkafka \
+	     libzmq4>0:net/libzmq4
 
 MAINTAINER=	info@dynfi.com
 COMMENT=	NetFlow/IPFIX probe and collector

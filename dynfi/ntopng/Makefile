@@ -7,15 +7,15 @@ DISTFILES=
 PLIST=           ${.CURDIR}/pkg-plist
 
 PORTVERSION=	5.3.220226
-RUN_DEPENDS= 	bash>=0:shells/bash \
-		libmaxminddb>=0:net/libmaxminddb \
-		libsodium>=0:security/libsodium \
-		libzmq4>=0:net/libzmq4 \
-		lua53>=0:lang/lua53 \
-		redis>=0:databases/redis \
-		rrdtool>=0:databases/rrdtool \
-		sqlite3>=0:databases/sqlite3 \
-		zstd>=0:archivers/zstd
+RUN_DEPENDS= 	bash>0:shells/bash \
+		libmaxminddb>0:net/libmaxminddb \
+		libsodium>0:security/libsodium \
+		libzmq4>0:net/libzmq4 \
+		lua53>0:lang/lua53 \
+		redis>0:databases/redis \
+		rrdtool>0:databases/rrdtool \
+		sqlite3>0:databases/sqlite3 \
+		zstd>0:archivers/zstd
 
 COMMENT=High speed network traffic monitor
 
