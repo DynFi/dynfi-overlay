@@ -13,6 +13,9 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		autossh>=0:security/autossh \
 		beep>=0:audio/beep \
 		intel-ix-kmod>=0:net/intel-ix-kmod \
+		nprobe>=0:dynfi/nprobe \
+		ntopng>=0:dynfi/ntopng \
+		n2disk>=0:dynfi/n2disk \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
 USES=   php:flavors
