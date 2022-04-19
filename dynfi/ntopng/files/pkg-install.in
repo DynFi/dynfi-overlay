@@ -1,0 +1,6 @@
+if ! id "ntopng" >/dev/null 2>&1; then
+  pw useradd ntopng -s /sbin/nologin -d /nonexistent -c "ntopng user" -w no
+fi
+chown ntopng:ntopng /usr/local/bin/ntopng-config
+chmod ugo+s /usr/local/bin/ntopng-config
+chown -R ntopng:ntopng /usr/local/etc/ntopng
