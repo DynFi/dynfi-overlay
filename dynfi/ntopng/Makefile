@@ -33,7 +33,5 @@ do-extract:
 
 do-install:
 	cp -Rvp ${WRKSRC}/ ${STAGEDIR}
-	echo "ASDASD"
-	ls /wrkdirs/overlays/dynfi-overlay/dynfi/ntopng/work/stage/usr/local/share/man/man8/ntopng.8
 
 .include <bsd.port.mk>
