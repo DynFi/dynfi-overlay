@@ -17,6 +17,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		n2disk>=0:dynfi/n2disk \
 		nprobe>=0:dynfi/nprobe \
 		ntopng>=0:dynfi/ntopng \
+		outline-ss-server>=:dynfi/outline-ss-server \
 		ddclient>=:dns/ddclient \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
