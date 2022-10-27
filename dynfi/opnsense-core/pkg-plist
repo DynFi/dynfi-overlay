@@ -417,10 +417,12 @@ opnsense/mvc/app/controllers/OPNsense/Routes/Api/RoutesController.php
 opnsense/mvc/app/controllers/OPNsense/Routes/IndexController.php
 opnsense/mvc/app/controllers/OPNsense/Routes/forms/dialogEditRoute.xml
 opnsense/mvc/app/controllers/OPNsense/RPZ/Api/BlackController.php
+opnsense/mvc/app/controllers/OPNsense/RPZ/Api/ChartController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/Api/ListController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/Api/ServiceController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/Api/WhiteController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/BlacklistController.php
+opnsense/mvc/app/controllers/OPNsense/RPZ/ChartController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/IndexController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/WhitelistController.php
 opnsense/mvc/app/controllers/OPNsense/RPZ/forms/black.xml
@@ -773,6 +775,7 @@ opnsense/mvc/app/views/OPNsense/Ntopng/general.volt
 opnsense/mvc/app/views/OPNsense/Ntopng/license.volt
 opnsense/mvc/app/views/OPNsense/OpenVPN/export.volt
 opnsense/mvc/app/views/OPNsense/Proxy/index.volt
+opnsense/mvc/app/views/OPNsense/RPZ/chart.volt
 opnsense/mvc/app/views/OPNsense/RPZ/blacklist.volt
 opnsense/mvc/app/views/OPNsense/RPZ/index.volt
 opnsense/mvc/app/views/OPNsense/RPZ/whitelist.volt
