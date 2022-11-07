@@ -989,6 +989,8 @@ opnsense/scripts/proxy/fetchACLs.py
 opnsense/scripts/proxy/generate_cert.php
 opnsense/scripts/proxy/lib/__init__.py
 opnsense/scripts/proxy/setup.sh
+opnsense/scripts/rpz/stats.sh
+opnsense/scripts/rpz/timerange.sh
 opnsense/scripts/redis/setup.sh
 opnsense/scripts/remote_backup.php
 opnsense/scripts/routes/del_route.py
@@ -1082,6 +1084,7 @@ opnsense/service/conf/actions.d/actions_pfplugin.conf
 opnsense/service/conf/actions.d/actions_plugins.conf
 opnsense/service/conf/actions.d/actions_proxy.conf
 opnsense/service/conf/actions.d/actions_redis.conf
+opnsense/service/conf/actions.d/actions_rpz.conf
 opnsense/service/conf/actions.d/actions_smart.conf
 opnsense/service/conf/actions.d/actions_syslog.conf
 opnsense/service/conf/actions.d/actions_system.conf
