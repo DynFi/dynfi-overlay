@@ -7,7 +7,6 @@ share/dynfi/rpz/celebrity.conf
 share/dynfi/rpz/chat.conf
 share/dynfi/rpz/cooking.conf
 share/dynfi/rpz/crypto.conf
-share/dynfi/rpz/cryptocurrency.conf
 share/dynfi/rpz/dangerousmaterial.conf
 share/dynfi/rpz/dating.conf
 share/dynfi/rpz/doh.conf
@@ -30,18 +29,15 @@ share/dynfi/rpz/imagehosting.conf
 share/dynfi/rpz/isp.conf
 share/dynfi/rpz/jobsearch.conf
 share/dynfi/rpz/library.conf
-share/dynfi/rpz/lingerie.conf
 share/dynfi/rpz/malware.conf
 share/dynfi/rpz/manga.conf
 share/dynfi/rpz/military.conf
 share/dynfi/rpz/movies.conf
 share/dynfi/rpz/music.conf
-share/dynfi/rpz/new.conf
 share/dynfi/rpz/news.conf
 share/dynfi/rpz/phone.conf
 share/dynfi/rpz/piracy.conf
 share/dynfi/rpz/podcasts.conf
-share/dynfi/rpz/politics.conf
 share/dynfi/rpz/porn.conf
 share/dynfi/rpz/privacy.conf
 share/dynfi/rpz/radio.conf
@@ -56,10 +52,8 @@ share/dynfi/rpz/sexualeducation.conf
 share/dynfi/rpz/shopping.conf
 share/dynfi/rpz/socialmedia.conf
 share/dynfi/rpz/sports.conf
-share/dynfi/rpz/stalkerware.conf
 share/dynfi/rpz/translation.conf
 share/dynfi/rpz/urlshortener.conf
 share/dynfi/rpz/video.conf
 share/dynfi/rpz/vpn.conf
-share/dynfi/rpz/weapons.conf
 share/dynfi/rpz/webmail.conf
