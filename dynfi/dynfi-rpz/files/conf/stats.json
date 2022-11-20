@@ -1,0 +1,238 @@
+{
+ "advertise": {
+  "size": 5002954,
+  "lines": 162992
+ },
+ "aggressive": {
+  "size": 13935,
+  "lines": 565
+ },
+ "alcohol": {
+  "size": 16474,
+  "lines": 657
+ },
+ "bank": {
+  "size": 121082,
+  "lines": 5224
+ },
+ "blog": {
+  "size": 35633,
+  "lines": 1469
+ },
+ "celebrity": {
+  "size": 69462,
+  "lines": 2568
+ },
+ "chat": {
+  "size": 353243,
+  "lines": 14727
+ },
+ "cooking": {
+  "size": 18129,
+  "lines": 676
+ },
+ "crypto": {
+  "size": 640582,
+  "lines": 23975
+ },
+ "dangerousmaterial": {
+  "size": 764,
+  "lines": 31
+ },
+ "dating": {
+  "size": 162715,
+  "lines": 6524
+ },
+ "doh": {
+  "size": 1974,
+  "lines": 76
+ },
+ "drugs": {
+  "size": 727234,
+  "lines": 27117
+ },
+ "education": {
+  "size": 210167,
+  "lines": 9878
+ },
+ "filterbypass": {
+  "size": 2628826,
+  "lines": 108710
+ },
+ "finance": {
+  "size": 220889,
+  "lines": 7986
+ },
+ "fortunetelling": {
+  "size": 28794,
+  "lines": 1086
+ },
+ "forum": {
+  "size": 207798,
+  "lines": 7937
+ },
+ "frexamcheaters": {
+  "size": 70412,
+  "lines": 3058
+ },
+ "fraud": {
+  "size": 5953065,
+  "lines": 196088
+ },
+ "gamble": {
+  "size": 381064,
+  "lines": 14548
+ },
+ "gambling": {
+  "size": 92892,
+  "lines": 3753
+ },
+ "games": {
+  "size": 556408,
+  "lines": 22860
+ },
+ "government": {
+  "size": 45508,
+  "lines": 2004
+ },
+ "hacking": {
+  "size": 14580,
+  "lines": 607
+ },
+ "homestyle": {
+  "size": 7895,
+  "lines": 308
+ },
+ "hospitals": {
+  "size": 46237,
+  "lines": 1634
+ },
+ "imagehosting": {
+  "size": 14156,
+  "lines": 625
+ },
+ "isp": {
+  "size": 18197,
+  "lines": 853
+ },
+ "jobsearch": {
+  "size": 104645,
+  "lines": 4229
+ },
+ "library": {
+  "size": 5677,
+  "lines": 235
+ },
+ "malware": {
+  "size": 17093094,
+  "lines": 576610
+ },
+ "manga": {
+  "size": 16049,
+  "lines": 634
+ },
+ "military": {
+  "size": 18430,
+  "lines": 774
+ },
+ "movies": {
+  "size": 152766,
+  "lines": 6119
+ },
+ "music": {
+  "size": 256408,
+  "lines": 9996
+ },
+ "news": {
+  "size": 1179164,
+  "lines": 49372
+ },
+ "phone": {
+  "size": 2233,
+  "lines": 97
+ },
+ "piracy": {
+  "size": 439096,
+  "lines": 16642
+ },
+ "podcasts": {
+  "size": 3677,
+  "lines": 137
+ },
+ "porn": {
+  "size": 169351201,
+  "lines": 4908489
+ },
+ "privacy": {
+  "size": 6026964,
+  "lines": 205982
+ },
+ "radio": {
+  "size": 178487,
+  "lines": 7696
+ },
+ "reaffected": {
+  "size": 194,
+  "lines": 7
+ },
+ "redirector": {
+  "size": 654770,
+  "lines": 28401
+ },
+ "religion": {
+  "size": 270897,
+  "lines": 9298
+ },
+ "remotecontrol": {
+  "size": 1819,
+  "lines": 80
+ },
+ "ringtones": {
+  "size": 11855,
+  "lines": 448
+ },
+ "science": {
+  "size": 33086,
+  "lines": 1230
+ },
+ "searchengnines": {
+  "size": 26679,
+  "lines": 1181
+ },
+ "sexualeducation": {
+  "size": 4687,
+  "lines": 175
+ },
+ "shopping": {
+  "size": 8476572,
+  "lines": 329329
+ },
+ "socialmedia": {
+  "size": 1132695,
+  "lines": 28800
+ },
+ "sports": {
+  "size": 3491659,
+  "lines": 134907
+ },
+ "translation": {
+  "size": 4758,
+  "lines": 174
+ },
+ "urlshortener": {
+  "size": 12375,
+  "lines": 720
+ },
+ "video": {
+  "size": 1146452,
+  "lines": 28259
+ },
+ "vpn": {
+  "size": 51227,
+  "lines": 1855
+ },
+ "webmail": {
+  "size": 88184,
+  "lines": 3702
+ }
+}
