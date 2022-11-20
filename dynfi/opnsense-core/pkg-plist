@@ -1049,7 +1049,11 @@ opnsense/scripts/systemhealth/fetchData.py
 opnsense/scripts/systemhealth/flush_rrd.py
 opnsense/scripts/systemhealth/listReports.py
 opnsense/scripts/systemhealth/logformats/__init__.py
+opnsense/scripts/systemhealth/logformats/cicap.py
+opnsense/scripts/systemhealth/logformats/clamd.py
 opnsense/scripts/systemhealth/logformats/dfconag.py
+opnsense/scripts/systemhealth/logformats/nprobe.py
+opnsense/scripts/systemhealth/logformats/ntopng.py
 opnsense/scripts/systemhealth/logformats/squid.py
 opnsense/scripts/systemhealth/logformats/syslog.py
 opnsense/scripts/systemhealth/queryLog.py
