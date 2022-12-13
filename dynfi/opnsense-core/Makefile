@@ -12,12 +12,13 @@ COMMENT=	OPNsense Core package
 
 LICENSE=	BSD2CLAUSE
 
-IGNORE_WITH_PHP=	80
-
 OPNSENSE_PORT_REV=	${PORTREVISION}
 
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		choparp>=0:net-mgmt/choparp \
+		cpdup>=0:sysutils/cpdup \
+		cyrus-sasl2>=0:security/cyrus-sasl \
+		cyrus-sasl2-gssapi>=0:security/cyrus-sasl2-gssapi \
 		cpustats>=0:dynfi/cpustats \
 		dhcp6c>=0:dynfi/dhcp6c \
 		dhcpleases>=0:dynfi/dhcpleases \
@@ -61,7 +62,8 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ujson>=0:devel/py-ujson@${PY_FLAVOR} \
-		${PHP_PKGNAMEPREFIX}phalcon4>=0:www/phalcon4 \
+		${PYTHON_PKGNAMEPREFIX}vici>=0:security/py-vici@${PY_FLAVOR} \
+		${PHP_PKGNAMEPREFIX}phalcon5>=0:www/phalcon5 \
 		${PHP_PKGNAMEPREFIX}pecl-radius>=0:net/pecl-radius \
 		${PHP_PKGNAMEPREFIX}ctype>=0:textproc/${PHP_PKGNAMEPREFIX}ctype \
 		${PHP_PKGNAMEPREFIX}dom>=0:textproc/${PHP_PKGNAMEPREFIX}dom \
@@ -69,6 +71,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}gettext>=0:devel/${PHP_PKGNAMEPREFIX}gettext \
 		${PHP_PKGNAMEPREFIX}json>=0:devel/${PHP_PKGNAMEPREFIX}json \
 		${PHP_PKGNAMEPREFIX}ldap>=0:net/${PHP_PKGNAMEPREFIX}ldap \
+		${PHP_PKGNAMEPREFIX}mbstring>=0:converters/${PHP_PKGNAMEPREFIX}mbstring ldap \
 		${PHP_PKGNAMEPREFIX}pecl-mcrypt>=0:security/pecl-mcrypt \
 		${PHP_PKGNAMEPREFIX}openssl>=0:security/${PHP_PKGNAMEPREFIX}openssl \
 		${PHP_PKGNAMEPREFIX}pdo>=0:databases/${PHP_PKGNAMEPREFIX}pdo \
