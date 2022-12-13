@@ -81,6 +81,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}sqlite3>=0:databases/${PHP_PKGNAMEPREFIX}sqlite3 \
 		${PHP_PKGNAMEPREFIX}xml>=0:textproc/${PHP_PKGNAMEPREFIX}xml \
 		${PHP_PKGNAMEPREFIX}phpseclib>=0:dynfi/phpseclib \
+		${PHP_PKGNAMEPREFIX}google-api-php-client>=0:dynfi/google-api-php-client \
 		openssl>=0:security/openssl \
 		redis>=0:databases/redis \
 		zerotier>=0:net/zerotier \
