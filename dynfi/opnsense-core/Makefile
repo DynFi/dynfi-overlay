@@ -1,8 +1,8 @@
 # $FreeBSD$
 
 PORTNAME=	opnsense-core
-PORTVERSION=	21.10.1
-PORTREVISION=	37
+PORTVERSION=	22.7.8
+PORTREVISION=	1
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -17,11 +17,10 @@ OPNSENSE_PORT_REV=	${PORTREVISION}
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		choparp>=0:net-mgmt/choparp \
 		cpdup>=0:sysutils/cpdup \
-		cyrus-sasl2>=0:security/cyrus-sasl \
-		cyrus-sasl2-gssapi>=0:security/cyrus-sasl2-gssapi \
+		cyrus-sasl>=0:security/cyrus-sasl2 \
+		cyrus-sasl-gssapi>=0:security/cyrus-sasl2-gssapi \
 		cpustats>=0:dynfi/cpustats \
 		dhcp6c>=0:dynfi/dhcp6c \
-		dhcpleases>=0:dynfi/dhcpleases \
 		dnsmasq>=0:dns/dnsmasq \
 		dpinger>=0:net/dpinger \
 		expiretable>=0:security/expiretable \
@@ -52,7 +51,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		strongswan>=0:security/strongswan \
 		sudo>=0:security/sudo \
 		suricata>=0:security/suricata \
-		syslog-ng>=0:sysutils/syslog-ng \
 		unbound>=0:dns/unbound \
 		wpa_supplicant>=0:security/wpa_supplicant \
 		zip>=0:archivers/zip \
@@ -63,17 +61,15 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}ujson>=0:devel/py-ujson@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}vici>=0:security/py-vici@${PY_FLAVOR} \
-		${PHP_PKGNAMEPREFIX}phalcon5>=0:www/phalcon5 \
+		${PHP_PKGNAMEPREFIX}phalcon>=0:www/phalcon \
+		${PHP_PKGNAMEPREFIX}ldap>=0:net/${PHP_PKGNAMEPREFIX}ldap \
 		${PHP_PKGNAMEPREFIX}pecl-radius>=0:net/pecl-radius \
 		${PHP_PKGNAMEPREFIX}ctype>=0:textproc/${PHP_PKGNAMEPREFIX}ctype \
 		${PHP_PKGNAMEPREFIX}dom>=0:textproc/${PHP_PKGNAMEPREFIX}dom \
 		${PHP_PKGNAMEPREFIX}filter>=0:security/${PHP_PKGNAMEPREFIX}filter \
 		${PHP_PKGNAMEPREFIX}gettext>=0:devel/${PHP_PKGNAMEPREFIX}gettext \
-		${PHP_PKGNAMEPREFIX}json>=0:devel/${PHP_PKGNAMEPREFIX}json \
-		${PHP_PKGNAMEPREFIX}ldap>=0:net/${PHP_PKGNAMEPREFIX}ldap \
-		${PHP_PKGNAMEPREFIX}mbstring>=0:converters/${PHP_PKGNAMEPREFIX}mbstring ldap \
+		${PHP_PKGNAMEPREFIX}mbstring>=0:converters/${PHP_PKGNAMEPREFIX}mbstring \
 		${PHP_PKGNAMEPREFIX}pecl-mcrypt>=0:security/pecl-mcrypt \
-		${PHP_PKGNAMEPREFIX}openssl>=0:security/${PHP_PKGNAMEPREFIX}openssl \
 		${PHP_PKGNAMEPREFIX}pdo>=0:databases/${PHP_PKGNAMEPREFIX}pdo \
 		${PHP_PKGNAMEPREFIX}session>=0:www/${PHP_PKGNAMEPREFIX}session \
 		${PHP_PKGNAMEPREFIX}simplexml>=0:textproc/${PHP_PKGNAMEPREFIX}simplexml \
@@ -85,6 +81,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		openssl>=0:security/openssl \
 		redis>=0:databases/redis \
 		zerotier>=0:net/zerotier \
+		syslog-ng>=0:sysutils/syslog-ng \
 		clamav>=0:security/clamav \
 		c-icap>=0:www/c-icap \
 		c-icap-modules>=0:www/c-icap-modules
