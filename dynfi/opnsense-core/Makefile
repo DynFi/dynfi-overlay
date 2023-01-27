@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	opnsense-core
-PORTVERSION=	22.7.8
+PORTVERSION=	22.7.10
 PORTREVISION=	1
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
@@ -90,10 +90,10 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 USES=	python:3.9 php:flavors shebangfix
 USE_PHP=	curl zlib sockets
 
-SHEBANG_FILES=	src/opnsense/scripts/systemhealth/fetchData.py \
-		src/opnsense/scripts/systemhealth/activity.py \
-		src/opnsense/scripts/systemhealth/flush_rrd.py \
-		src/opnsense/scripts/systemhealth/listReports.py
+SHEBANG_FILES=	src/opnsense/scripts/health/fetchData.py \
+		src/opnsense/scripts/health/flush_rrd.py \
+		src/opnsense/scripts/health/listReports.py \
+		src/opnsense/scripts/system/activity.py
 
 MAKE_ENV+=	VERSION=${PORTVERSION}
 
