@@ -2398,4 +2398,4 @@ share/ntopng/pro/scripts/lua/rest/v2/set/observation_points/alias.lua
 share/ntopng/pro/scripts/lua/rest/v2/set/pool/policy.lua
 share/ntopng/pro/scripts/lua/rest/v2/set/pool/policy_autoconf.lua
 share/ntopng/pro/scripts/lua/treemapchart.lua
-share/man/man8/ntopng.8
+share/man/man8/ntopng.8.gz
