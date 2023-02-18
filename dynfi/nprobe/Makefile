@@ -7,8 +7,9 @@ DISTFILES=
 PLIST=           ${.CURDIR}/pkg-plist
 
 
-PORTVERSION= 9.7.220226
-RUN_DEPENDS= json-c>0:devel/json-c \
+PORTVERSION=10.3.230218
+RUN_DEPENDS= hiredis>0:databases/hiredis \
+	     json-c>0:devel/json-c \
 	     libmaxminddb>0:net/libmaxminddb \
 	     librdkafka>0:net/librdkafka \
 	     libzmq4>0:net/libzmq4 \

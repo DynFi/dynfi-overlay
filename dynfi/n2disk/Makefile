@@ -6,7 +6,7 @@ CATEGORIES=	dynfi
 DISTFILES=
 PLIST=           ${.CURDIR}/pkg-plist
 
-PORTVERSION= 3.7.220226
+PORTVERSION=3.7.230218
 RUN_DEPENDS= libzmq4>0:net/libzmq4
 
 COMMENT=Network traffic recorder

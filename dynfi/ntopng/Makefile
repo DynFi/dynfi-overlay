@@ -8,7 +8,9 @@ PLIST=           ${.CURDIR}/pkg-plist
 
 PORTVERSION=	5.3.220226
 RUN_DEPENDS= 	bash>0:shells/bash \
+		json-c>0:devel/json-c \
 		libmaxminddb>0:net/libmaxminddb \
+		librdkafka>0:net/librdkafka \
 		libsodium>0:security/libsodium \
 		libzmq4>0:net/libzmq4 \
 		lua53>0:lang/lua53 \
