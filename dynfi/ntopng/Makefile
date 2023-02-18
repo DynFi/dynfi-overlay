@@ -6,7 +6,7 @@ CATEGORIES=	dynfi
 DISTFILES=
 PLIST=           ${.CURDIR}/pkg-plist
 
-PORTVERSION=	5.3.220226
+PORTVERSION=	5.7.230218
 RUN_DEPENDS= 	bash>0:shells/bash \
 		json-c>0:devel/json-c \
 		libmaxminddb>0:net/libmaxminddb \
