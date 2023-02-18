@@ -32,7 +32,6 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		n2disk>=0:dynfi/n2disk \
 		nprobe>=0:dynfi/nprobe \
 		ntopng>=0:dynfi/ntopng \
-		wireguard>=:net/wireguard \
 		freeradius3>0:net/freeradius3 \
 		outline-ss-server>=:dynfi/outline-ss-server \
 		ddclient>=:dns/ddclient \
