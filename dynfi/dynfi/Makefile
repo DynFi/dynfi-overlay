@@ -33,8 +33,9 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		nprobe>=0:dynfi/nprobe \
 		ntopng>=0:dynfi/ntopng \
 		freeradius3>0:net/freeradius3 \
-		outline-ss-server>=:dynfi/outline-ss-server \
-		ddclient>=:dns/ddclient \
+		outline-ss-server>0:dynfi/outline-ss-server \
+		ddclient>=0:dns/ddclient \
+		wireguard-tools>=0:net/wireguard-tools \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
 USES=   php:flavors
