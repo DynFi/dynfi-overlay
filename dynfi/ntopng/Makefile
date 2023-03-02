@@ -21,8 +21,6 @@ RUN_DEPENDS= 	bash>0:shells/bash \
 
 COMMENT=High speed network traffic monitor
 
-SUB_FILES+=     pkg-install
-
 MAINTAINER=	info@dynfi.com
 
 LICENSE=	BSD2CLAUSE

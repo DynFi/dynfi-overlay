@@ -1,17 +1,13 @@
 #!/bin/sh
 
-if [ "$2" != "POST-INSTALL" ]; then
-    exit 0
-fi
-
 if ! id "ntopng" >/dev/null 2>&1; then
     pw useradd ntopng -s /sbin/nologin -d /nonexistent -c "ntopng user" -w no
 fi
-chown ntopng:ntopng /usr/local/bin/ntopng-config
-chmod ugo+s /usr/local/bin/ntopng-config
-chown -R ntopng:ntopng /usr/local/etc/ntopng
+chown ntopng:ntopng ${PKG_PREFIX}/bin/ntopng-config
+chmod ugo+s ${PKG_PREFIX}/bin/ntopng-config
+chown -R ntopng:ntopng ${PKG_PREFIX}/etc/ntopng
 
-OLD_LIBLDAB=`ldd /usr/local/bin/ntopng | grep libldap | sed 's/ =>.*//' | tr -d '\t'`
-ln -s /usr/local/lib/libldap.so /usr/local/lib/${OLD_LIBLDAB}
-OLD_LIBLBER=`ldd /usr/local/bin/ntopng | grep liblber | sed 's/ =>.*//' | tr -d '\t'`
-ln -s /usr/local/lib/liblber.so /usr/local/lib/${OLD_LIBLBER}
+OLD_LIBLDAB=`ldd ${PKG_PREFIX}/bin/ntopng | grep libldap | sed 's/ =>.*//' | tr -d '\t'`
+ln -s ${PKG_PREFIX}/lib/libldap.so ${PKG_PREFIX}/lib/${OLD_LIBLDAB}
+OLD_LIBLBER=`ldd ${PKG_PREFIX}/bin/ntopng | grep liblber | sed 's/ =>.*//' | tr -d '\t'`
+ln -s ${PKG_PREFIX}/lib/liblber.so ${PKG_PREFIX}/lib/${OLD_LIBLBER}
