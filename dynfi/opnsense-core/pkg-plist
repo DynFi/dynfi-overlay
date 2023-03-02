@@ -1127,6 +1127,7 @@ opnsense/scripts/routes/del_route.py
 opnsense/scripts/routes/gateway_status.php
 opnsense/scripts/routes/gateways.php
 opnsense/scripts/routes/show_routes.py
+opnsense/scripts/rpz/rpzfilestats.py
 opnsense/scripts/rpz/stats.sh
 opnsense/scripts/rpz/timerange.sh
 opnsense/scripts/shaper/dummynet_stats.py
