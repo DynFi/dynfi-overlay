@@ -40,6 +40,7 @@ catalogues = [
 "piracy",
 "podcasts",
 "porn",
+"pornsmall",
 "privacy",
 "radio",
 "reaffected",
