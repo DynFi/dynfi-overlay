@@ -22,7 +22,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		zabbix5-agent>=0:net-mgmt/zabbix5-agent \
 		freeradius3>=0:net/freeradius3 \
 		frr7>=0:net/frr7 \
-		haproxy23>=0:net/haproxy23 \
+		haproxy>=0:net/haproxy \
 		siproxd>=0:net/siproxd \
 		lcdproc>=0:sysutils/lcdproc \
 		autossh>=0:security/autossh \
