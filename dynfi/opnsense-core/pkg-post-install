@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm /tmp/opnsense_menu_cache.xml
+rm /tmp/opnsense_buttons_cache.xml
+exit 0
