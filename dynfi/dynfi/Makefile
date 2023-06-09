@@ -1,6 +1,6 @@
 PORTNAME=	DynFi
 DISTVERSION=	1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dynfi
 DISTFILES=
 
@@ -29,6 +29,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		beep>=0:audio/beep \
 		intel-ix-kmod>=0:net/intel-ix-kmod \
 		dynfi-rpz>=0:dynfi/dynfi-rpz \
+		dynfi-confs>=0:dynfi/dynfi-confs \
 		n2disk>=0:dynfi/n2disk \
 		nprobe>=0:dynfi/nprobe \
 		ntopng>=0:dynfi/ntopng \
