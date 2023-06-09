@@ -1,0 +1,8 @@
+hint.igc.0.at="pci0:11:0:0"
+hint.igc.1.at="pci0:13:0:0"
+hint.igc.2.at="pci0:14:0:0"
+hint.igc.3.at="pci0:12:0:0"
+hint.igc.4.at="pci0:7:0:0"
+hint.igc.5.at="pci0:8:0:0"
+hint.igc.6.at="pci0:5:0:0"
+hint.igc.7.at="pci0:6:0:0"
