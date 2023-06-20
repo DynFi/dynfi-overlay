@@ -2,4 +2,5 @@
 
 rm /tmp/opnsense_menu_cache.xml
 rm /tmp/opnsense_buttons_cache.xml
+/usr/local/etc/rc.reload_all
 exit 0
