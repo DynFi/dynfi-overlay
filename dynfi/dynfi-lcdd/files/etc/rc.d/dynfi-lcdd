@@ -1,0 +1,39 @@
+#!/bin/sh
+#
+# PROVIDE: lcdd_dynfi
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="lcdd_dynfi"
+
+lcdd_py="/usr/local/bin/dynfi-lcdd.py"
+
+start_cmd="lcdd_dynfi_start"
+stop_cmd="lcdd_dynfi_stop"
+
+lcdd_dynfi_start()
+{
+    /usr/local/etc/rc.syshook.d/stop/5-dynfi-lcdd
+    sleep 1
+    /usr/local/etc/rc.syshook.d/start/95-dynfi-lcdd
+}
+
+lcdd_dynfi_stop()
+{
+    /usr/local/etc/rc.syshook.d/stop/5-dynfi-lcdd
+}
+
+lcdd_dynfi_restart()
+{
+	lcdd_dynfi_start
+}
+
+lcdd_dynfi_reload()
+{
+	lcdd_dynfi_start
+}
+
+load_rc_config $name
+run_rc_command "$1"

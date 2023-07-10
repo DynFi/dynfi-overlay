@@ -1,0 +1,15 @@
+#!/bin/sh
+
+smbios_product="$(kenv smbios.planar.product)"
+
+case "$smbios_product" in
+    MZ10) ;;
+    Z745) ;;
+    *)
+        exit 0
+        ;;
+esac
+
+/usr/local/sbin/LCDd -c /usr/local/etc/LCDd.conf &
+sleep 1
+su -m nobody -c "daemon python3 /usr/local/bin/dynfi-lcdd.py"

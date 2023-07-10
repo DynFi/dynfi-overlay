@@ -1,0 +1,5 @@
+bin/dynfi-lcdd.py
+etc/LCDd.conf
+etc/rc.syshook.d/start/95-dynfi-lcdd
+etc/rc.syshook.d/stop/5-dynfi-lcdd
+etc/rc.d/dynfi-lcdd
