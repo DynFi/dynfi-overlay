@@ -1132,6 +1132,8 @@ opnsense/scripts/routes/show_routes.py
 opnsense/scripts/rpz/rpzfilestats.py
 opnsense/scripts/rpz/stats.sh
 opnsense/scripts/rpz/timerange.sh
+opnsense/scripts/lcd/enablesimple.php
+opnsense/scripts/lcd/disablesimple.php
 opnsense/scripts/shaper/dummynet_stats.py
 opnsense/scripts/shaper/lib/__init__.py
 opnsense/scripts/shaper/update_tables
@@ -1211,6 +1213,7 @@ opnsense/service/conf/actions.d/actions_ids.conf
 opnsense/service/conf/actions.d/actions_interface.conf
 opnsense/service/conf/actions.d/actions_ipfw.conf
 opnsense/service/conf/actions.d/actions_ipsec.conf
+opnsense/service/conf/actions.d/actions_lcd.conf
 opnsense/service/conf/actions.d/actions_monit.conf
 opnsense/service/conf/actions.d/actions_netflow.conf
 opnsense/service/conf/actions.d/actions_nprobe.conf
