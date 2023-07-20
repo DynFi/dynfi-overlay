@@ -27,12 +27,12 @@ lcdd_dynfi_stop()
 
 lcdd_dynfi_restart()
 {
-	lcdd_dynfi_start
+    lcdd_dynfi_start
 }
 
 lcdd_dynfi_reload()
 {
-	lcdd_dynfi_start
+    lcdd_dynfi_start
 }
 
 load_rc_config $name

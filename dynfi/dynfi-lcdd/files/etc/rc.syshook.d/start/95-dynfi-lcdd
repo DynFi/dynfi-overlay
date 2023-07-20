@@ -11,5 +11,5 @@ case "$smbios_product" in
 esac
 
 /usr/local/sbin/LCDd -c /usr/local/etc/LCDd.conf &
-sleep 1
+sleep 2
 su -m nobody -c "daemon python3 /usr/local/bin/dynfi-lcdd.py"
