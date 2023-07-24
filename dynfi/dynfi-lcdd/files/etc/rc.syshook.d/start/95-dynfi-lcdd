@@ -3,7 +3,6 @@
 smbios_product="$(kenv smbios.planar.product)"
 
 case "$smbios_product" in
-    MZ10) ;;
     Z745) ;;
     *)
         exit 0
