@@ -7,7 +7,7 @@ CATEGORIES=	dynfi
 DISTFILES=
 
 MAINTAINER=	oshogbo@DynFi.com
-COMMENT=	DynFI rpz block list
+COMMENT=	DynFI lcdd
 
 LICENSE=	BSD2CLAUSE
 
