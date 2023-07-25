@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# PROVIDE: dynfi_autoconf 
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+
+. /etc/rc.subr
+
+name="dynfi_autoconf"
+
+start_cmd="dynfi_autconf_start"
+stop_cmd="dynfi_autoconf_stop"
+
+dynfi_autconf_start()
+{
+    /usr/local/etc/rc.syshook.d/stop/5-dynfi-autoconf
+    sleep 1
+    /usr/local/etc/rc.syshook.d/start/95-dynfi-autoconf
+}
+
+dynfi_autconf_stop()
+{
+    /usr/local/etc/rc.syshook.d/stop/5-dynfi-autoconf
+}
+
+dynfi_autconf_restart()
+{
+    dynfi_autconf_start
+}
+
+dynfi_autconf_reload()
+{
+    dynfi_autconf_start
+}
+
+load_rc_config $name
+run_rc_command "$1"

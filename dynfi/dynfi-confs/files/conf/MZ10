@@ -2,3 +2,6 @@ hint.igc.0.at="pci0:4:0:0"
 hint.igc.1.at="pci0:3:0:0"
 hint.igc.2.at="pci0:2:0:0"
 hint.igc.3.at="pci0:1:0:0"
+
+economy_cx_lowest="C3"
+performance_cx_lowest="C2"

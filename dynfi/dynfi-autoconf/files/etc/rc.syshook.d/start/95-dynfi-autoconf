@@ -1,0 +1,12 @@
+#!/bin/sh
+
+smbios_product="$(kenv smbios.planar.product)"
+
+case "$smbios_product" in
+    MZ10)
+   	sysctl hw.acpi.cpu.cx_lowest="c3"
+	;;
+    *)
+        exit 0
+        ;;
+esac

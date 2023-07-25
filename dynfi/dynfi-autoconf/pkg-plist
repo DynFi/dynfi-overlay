@@ -1,0 +1,3 @@
+etc/rc.syshook.d/start/95-dynfi-autoconf
+etc/rc.syshook.d/stop/5-dynfi-autoconf
+etc/rc.d/dynfi-autoconf

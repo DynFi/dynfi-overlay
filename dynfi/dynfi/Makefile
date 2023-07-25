@@ -28,9 +28,10 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		autossh>=0:security/autossh \
 		beep>=0:audio/beep \
 		intel-ix-kmod>=0:net/intel-ix-kmod \
-		dynfi-rpz>=0:dynfi/dynfi-rpz \
+		dynfi-autoconf>=0:dynfi/dynfi-autoconf \
 		dynfi-confs>=0:dynfi/dynfi-confs \
 		dynfi-lcdd>=0:dynfi/dynfi-lcdd \
+		dynfi-rpz>=0:dynfi/dynfi-rpz \
 		n2disk>=0:dynfi/n2disk \
 		nprobe>=0:dynfi/nprobe \
 		ntopng>=0:dynfi/ntopng \
