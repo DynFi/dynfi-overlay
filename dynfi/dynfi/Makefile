@@ -40,6 +40,8 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		wireguard-tools>=0:net/wireguard-tools \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
+#virtualbox-ose-additions-nox11>=0:emulators/virtualbox-ose-additions-nox11 \
+
 USES=   php:flavors
 
 do-extract:

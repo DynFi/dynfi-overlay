@@ -2,7 +2,7 @@
 
 PORTNAME=	opnsense-core
 PORTVERSION=	22.7.11
-PORTREVISION=	23
+PORTREVISION=	24
 CATEGORIES=	dynfi
 PKGNAMEPREFIX=	${PHP_PKGNAMEPREFIX}
 DISTFILES=
@@ -36,7 +36,6 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		monit>=0:sysutils/monit \
 		mpd5>=0:net/mpd5 \
 		ntp>=0:net/ntp \
-		openssh-portable>=0:security/openssh-portable \
 		ldns>=0:dns/ldns \
 		openvpn>=0:security/openvpn \
 		opnsense-update>=0:dynfi/opnsense-update \
