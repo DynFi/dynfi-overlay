@@ -24,6 +24,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		dnsmasq>=0:dns/dnsmasq \
 		dpinger>=0:net/dpinger \
 		expiretable>=0:security/expiretable \
+		opie>=0:security/opie \
 		filterlog>=0:dynfi/filterlog \
 		ifinfo>=0:dynfi/ifinfo \
 		flock>=0:sysutils/flock \
