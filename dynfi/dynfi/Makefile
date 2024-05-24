@@ -38,11 +38,12 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		outline-ss-server>0:dynfi/outline-ss-server \
 		ddclient>=0:dns/ddclient \
 		wireguard-tools>=0:net/wireguard-tools \
+		${PYTHON_PKGNAMEPREFIX}cloud-init>0:net/cloud-init@${PY_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
 #virtualbox-ose-additions-nox11>=0:emulators/virtualbox-ose-additions-nox11 \
 
-USES=   php:flavors
+USES=	python:3.9 php:flavors
 
 do-extract:
 	${MKDIR} ${WRKSRC}
