@@ -11,7 +11,7 @@ LICENSE=	BSD2CLAUSE
 
 RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		iperf3>=0:benchmarks/iperf3 \
-		bind916>=0:dns/bind916 \
+		bind918>=0:dns/bind918 \
 		ddns>=0:dns/ddns \
 		qemu-guest-agent>=0:emulators/qemu@guestagent \
 		open-vm-tools-nox11>=0:emulators/open-vm-tools@nox11 \
