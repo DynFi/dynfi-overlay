@@ -68,6 +68,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}google-api-php-client>=0:dynfi/google-api-php-client \
 		${PHP_PKGNAMEPREFIX}ldap>=0:net/${PHP_PKGNAMEPREFIX}ldap \
 		${PHP_PKGNAMEPREFIX}mbstring>=0:converters/${PHP_PKGNAMEPREFIX}mbstring \
+		${PHP_PKGNAMEPREFIX}pcntl>=0:devel/${PHP_PKGNAMEPREFIX}pcntl \
 		${PHP_PKGNAMEPREFIX}pdo>=0:databases/${PHP_PKGNAMEPREFIX}pdo \
 		${PHP_PKGNAMEPREFIX}pecl-mcrypt>=0:security/pecl-mcrypt \
 		${PHP_PKGNAMEPREFIX}pecl-radius>=0:net/pecl-radius \
@@ -78,6 +79,7 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		${PHP_PKGNAMEPREFIX}sockets>=0:net/${PHP_PKGNAMEPREFIX}sockets \
 		${PHP_PKGNAMEPREFIX}sqlite3>=0:databases/${PHP_PKGNAMEPREFIX}sqlite3 \
 		${PHP_PKGNAMEPREFIX}xml>=0:textproc/${PHP_PKGNAMEPREFIX}xml \
+		${PHP_PKGNAMEPREFIX}zlib>=0:archivers/${PHP_PKGNAMEPREFIX}zlib \
 		openssl>=0:security/openssl \
 		redis>=0:databases/redis \
 		zerotier>=0:net/zerotier \
