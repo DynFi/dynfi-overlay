@@ -21,7 +21,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		nrpe>=0:net-mgmt/nrpe \
 		zabbix5-agent>=0:net-mgmt/zabbix5-agent \
 		freeradius3>=0:net/freeradius3 \
-		frr7>=0:net/frr7 \
+		frr8>=0:net/frr8 \
 		haproxy>=0:net/haproxy \
 		siproxd>=0:net/siproxd \
 		lcdproc>=0:sysutils/lcdproc \
