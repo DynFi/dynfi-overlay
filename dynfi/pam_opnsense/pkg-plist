@@ -1,6 +1,5 @@
 etc/pam.d/opnsense-login
-lib/libpam_opnsense.a
 lib/pam_opnsense.so
 libexec/opnsense-pam
-share/man/man8/opnsense-login.8.gz
 sbin/opnsense-login
+share/man/man8/opnsense-login.8.gz
