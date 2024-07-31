@@ -35,6 +35,7 @@ etc/inc/plugins.inc.d/kea.inc
 etc/inc/plugins.inc.d/loopback.inc
 etc/inc/plugins.inc.d/monit.inc
 etc/inc/plugins.inc.d/netflow.inc
+etc/inc/plugins.inc.d/netsnmp.inc
 etc/inc/plugins.inc.d/nprobe.inc
 etc/inc/plugins.inc.d/ntopng.inc
 etc/inc/plugins.inc.d/ntpd.inc
@@ -57,7 +58,6 @@ etc/inc/plugins.inc.d/vxlan.inc
 etc/inc/plugins.inc.d/webgui.inc
 etc/inc/plugins.inc.d/wireguard.inc
 etc/inc/plugins.inc.d/zerotier.inc
-etc/monit.opnsense.d/00-example.conf
 etc/inc/rrd.inc
 etc/inc/system.inc
 etc/inc/util.inc
@@ -68,6 +68,7 @@ etc/inc/xmlrpc/service.inc
 etc/inc/xmlrpc/test.inc
 etc/lighttpd_webgui/conf.d/README
 etc/lighttpd_webgui/conf.d/extforward.conf.example
+etc/monit.opnsense.d/00-example.conf
 etc/netflow.conf.example
 etc/newsyslog.conf.d/dynfi.conf
 etc/opnsense-beep.d/high
@@ -534,6 +535,12 @@ opnsense/mvc/app/controllers/OPNsense/Monit/forms/alerts.xml
 opnsense/mvc/app/controllers/OPNsense/Monit/forms/general.xml
 opnsense/mvc/app/controllers/OPNsense/Monit/forms/services.xml
 opnsense/mvc/app/controllers/OPNsense/Monit/forms/tests.xml
+opnsense/mvc/app/controllers/OPNsense/Netsnmp/Api/GeneralController.php
+opnsense/mvc/app/controllers/OPNsense/Netsnmp/Api/ServiceController.php
+opnsense/mvc/app/controllers/OPNsense/Netsnmp/Api/UserController.php
+opnsense/mvc/app/controllers/OPNsense/Netsnmp/GeneralController.php
+opnsense/mvc/app/controllers/OPNsense/Netsnmp/forms/dialogEditNetsnmpUser.xml
+opnsense/mvc/app/controllers/OPNsense/Netsnmp/forms/general.xml
 opnsense/mvc/app/controllers/OPNsense/Ntopng/Api/GeneralController.php
 opnsense/mvc/app/controllers/OPNsense/Ntopng/Api/LicenseController.php
 opnsense/mvc/app/controllers/OPNsense/Ntopng/Api/ServiceController.php
@@ -1025,6 +1032,7 @@ opnsense/mvc/app/models/OPNsense/Kea/KeaCtrlAgent.php
 opnsense/mvc/app/models/OPNsense/Kea/KeaCtrlAgent.xml
 opnsense/mvc/app/models/OPNsense/Kea/KeaDhcpv4.php
 opnsense/mvc/app/models/OPNsense/Kea/KeaDhcpv4.xml
+opnsense/mvc/app/models/OPNsense/Kea/Menu/Buttons.xml
 opnsense/mvc/app/models/OPNsense/Kea/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/Monit/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/Monit/Menu/Buttons.xml
@@ -1035,6 +1043,13 @@ opnsense/mvc/app/models/OPNsense/Monit/Migrations/M1_0_7.php
 opnsense/mvc/app/models/OPNsense/Monit/Migrations/M1_0_8.php
 opnsense/mvc/app/models/OPNsense/Monit/Monit.php
 opnsense/mvc/app/models/OPNsense/Monit/Monit.xml
+opnsense/mvc/app/models/OPNsense/Netsnmp/ACL/ACL.xml
+opnsense/mvc/app/models/OPNsense/Netsnmp/General.php
+opnsense/mvc/app/models/OPNsense/Netsnmp/General.xml
+opnsense/mvc/app/models/OPNsense/Netsnmp/Menu/Buttons.xml
+opnsense/mvc/app/models/OPNsense/Netsnmp/Menu/Menu.xml
+opnsense/mvc/app/models/OPNsense/Netsnmp/User.php
+opnsense/mvc/app/models/OPNsense/Netsnmp/User.xml
 opnsense/mvc/app/models/OPNsense/Ntopng/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/Ntopng/General.php
 opnsense/mvc/app/models/OPNsense/Ntopng/General.xml
@@ -1237,6 +1252,7 @@ opnsense/mvc/app/views/OPNsense/Kea/dhcpv4.volt
 opnsense/mvc/app/views/OPNsense/Kea/leases4.volt
 opnsense/mvc/app/views/OPNsense/Monit/index.volt
 opnsense/mvc/app/views/OPNsense/Monit/status.volt
+opnsense/mvc/app/views/OPNsense/Netsnmp/general.volt
 opnsense/mvc/app/views/OPNsense/Ntopng/general.volt
 opnsense/mvc/app/views/OPNsense/Ntopng/license.volt
 opnsense/mvc/app/views/OPNsense/OpenVPN/cso.volt
@@ -1399,6 +1415,7 @@ opnsense/scripts/OPNsense/HAProxy/updateOcsp.sh
 opnsense/scripts/OPNsense/Monit/carp_status
 opnsense/scripts/OPNsense/Monit/gateway_alert
 opnsense/scripts/OPNsense/Monit/setup.sh
+opnsense/scripts/OPNsense/Netsnmp/setup.sh
 opnsense/scripts/OPNsense/Ntopng/generate_certs.php
 opnsense/scripts/OPNsense/Ntopng/setup.sh
 opnsense/scripts/OPNsense/Siproxd/setup.sh
@@ -1706,6 +1723,7 @@ opnsense/service/conf/actions.d/actions_kea.conf
 opnsense/service/conf/actions.d/actions_lcd.conf
 opnsense/service/conf/actions.d/actions_monit.conf
 opnsense/service/conf/actions.d/actions_netflow.conf
+opnsense/service/conf/actions.d/actions_netsnmp.conf
 opnsense/service/conf/actions.d/actions_nprobe.conf
 opnsense/service/conf/actions.d/actions_ntopng.conf
 opnsense/service/conf/actions.d/actions_openssh.conf
@@ -1841,6 +1859,10 @@ opnsense/service/templates/OPNsense/Netflow/flowd.rc.conf.d
 opnsense/service/templates/OPNsense/Netflow/flowd_aggregate.rc.conf.d
 opnsense/service/templates/OPNsense/Netflow/netflow.conf
 opnsense/service/templates/OPNsense/Netflow/rc.conf.d
+opnsense/service/templates/OPNsense/Netsnmp/+TARGETS
+opnsense/service/templates/OPNsense/Netsnmp/snmpd
+opnsense/service/templates/OPNsense/Netsnmp/snmpd.conf
+opnsense/service/templates/OPNsense/Netsnmp/snmpd_usercredentials.conf
 opnsense/service/templates/OPNsense/Ntopng/+TARGETS
 opnsense/service/templates/OPNsense/Ntopng/ntopng
 opnsense/service/templates/OPNsense/Ntopng/ntopng.conf
