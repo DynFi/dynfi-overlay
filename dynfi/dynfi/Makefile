@@ -43,7 +43,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 
 #virtualbox-ose-additions-nox11>=0:emulators/virtualbox-ose-additions-nox11 \
 
-USES=	python:3.9 php:flavors
+USES=	python:3.11 php:flavors
 
 do-extract:
 	${MKDIR} ${WRKSRC}
