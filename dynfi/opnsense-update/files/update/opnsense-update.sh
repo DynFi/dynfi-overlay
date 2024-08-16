@@ -162,7 +162,7 @@ recover_origin()
 	done
 
 	# recover lost package(s)
-	${PKG} install -yr ${PRODUCT} ${1}
+	${PKG} install -yr DynFi ${1}
 }
 
 DO_MIRRORDIR=
@@ -531,7 +531,7 @@ if [ -n "${DO_TYPE}" ]; then
 		backup_origin
 
 		# attempt to install the new package type and...
-		if ! ${PKG} install -yr ${PRODUCT} ${DO_FORCE} ${NEW}; then
+		if ! ${PKG} install -yr dynfi ${DO_FORCE} ${NEW}; then
 			NEW=${OLD}
 		fi
 
@@ -767,7 +767,8 @@ install_pkgs()
 
 	# run full upgrade from the local repository
 	${TEE} ${LOGFILE} < ${PIPEFILE} &
-	if (${PKG} update -f && ${PKG} upgrade -fy -r ${PRODUCT}) > ${PIPEFILE} 2>&1; then
+	if (${PKG} update -f && ${PKG} upgrade -fy -r DynFi) > ${PIPEFILE} 2>&1; then
+		pkg install dynfi
 		# re-register local packages repository
 		# since the successful upgrade reset it
 		register_pkgs
