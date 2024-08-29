@@ -768,7 +768,7 @@ install_pkgs()
 	# run full upgrade from the local repository
 	${TEE} ${LOGFILE} < ${PIPEFILE} &
 	if (${PKG} update -f && ${PKG} upgrade -fy -r DynFi) > ${PIPEFILE} 2>&1; then
-		pkg install dynfi
+		pkg install -y dynfi
 		# re-register local packages repository
 		# since the successful upgrade reset it
 		register_pkgs
