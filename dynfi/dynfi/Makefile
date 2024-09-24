@@ -1,6 +1,6 @@
 PORTNAME=	DynFi
 DISTVERSION=	2
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	dynfi
 DISTFILES=
 
@@ -38,6 +38,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		outline-ss-server>0:dynfi/outline-ss-server \
 		ddclient>=0:dns/ddclient \
 		wireguard-tools>=0:net/wireguard-tools \
+		crowdsec>0:security/crowdsec \
 		${PYTHON_PKGNAMEPREFIX}cloud-init>0:net/cloud-init@${PY_FLAVOR} \
 		${PHP_PKGNAMEPREFIX}opnsense-core>=0:dynfi/opnsense-core
 
