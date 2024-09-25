@@ -1,5 +1,11 @@
 /boot/logo-hourglass.4th
+@sample etc/bogons.sample
+@sample etc/bogonsv6.sample
+@sample etc/config.xml.sample
+@sample opnsense/service/templates/OPNsense/IDS/custom.yaml.sample
 bin/python3
+etc/cron.d/oscrowdsec.cron
+etc/crowdsec/acquis.d/opnsense.yaml
 etc/devd/carp.conf
 etc/devd/ifnet.conf
 etc/dhcpd.opnsense.d/README
@@ -21,6 +27,7 @@ etc/inc/plugins.inc
 etc/inc/plugins.inc.d/cicap.inc
 etc/inc/plugins.inc.d/clamav.inc
 etc/inc/plugins.inc.d/core.inc
+etc/inc/plugins.inc.d/crowdsec.inc
 etc/inc/plugins.inc.d/ddclient.inc
 etc/inc/plugins.inc.d/dfconag.inc
 etc/inc/plugins.inc.d/dhcpd.inc
@@ -77,6 +84,11 @@ etc/opnsense-beep.d/start
 etc/opnsense-beep.d/stop
 etc/opnsense-update.conf
 etc/pkg/fingerprints/ntop/trusted/packages.ntop.org.2022012501
+etc/pkg/repos/Dynfi-dev.conf.sample
+etc/pkg/repos/Dynfi.conf.sample
+etc/pkg/repos/FreeBSD.conf.sample
+etc/pkg/repos/OPNsense.conf.sample
+etc/pkg/repos/ntop.conf.sample
 etc/rc
 etc/rc.bootup
 etc/rc.carp_service_status.d/carp_frr_ospf
@@ -89,6 +101,7 @@ etc/rc.d/configd
 etc/rc.d/dfconag
 etc/rc.d/flowd_aggregate
 etc/rc.d/netflow
+etc/rc.d/oscrowdsec
 etc/rc.expireaccounts
 etc/rc.filter_configure
 etc/rc.filter_synchronize
@@ -142,6 +155,7 @@ etc/rc.syshook.d/start/20-freebsd
 etc/rc.syshook.d/start/21-syslog-ng
 etc/rc.syshook.d/start/25-syslog
 etc/rc.syshook.d/start/50-c-icap
+etc/rc.syshook.d/start/50-crowdsec
 etc/rc.syshook.d/start/50-frr
 etc/rc.syshook.d/start/50-haproxy
 etc/rc.syshook.d/start/50-ntopng
@@ -317,6 +331,17 @@ opnsense/mvc/app/controllers/OPNsense/Cron/Api/SettingsController.php
 opnsense/mvc/app/controllers/OPNsense/Cron/IndexController.php
 opnsense/mvc/app/controllers/OPNsense/Cron/ItemController.php
 opnsense/mvc/app/controllers/OPNsense/Cron/forms/dialogEdit.xml
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/AlertsController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/BouncersController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/DecisionsController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/GeneralController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/HubController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/MachinesController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/ServiceController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/Api/VersionController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/GeneralController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/OverviewController.php
+opnsense/mvc/app/controllers/OPNsense/CrowdSec/forms/general.xml
 opnsense/mvc/app/controllers/OPNsense/DFConAg/Api/ServiceController.php
 opnsense/mvc/app/controllers/OPNsense/DFConAg/Api/SettingsController.php
 opnsense/mvc/app/controllers/OPNsense/DFConAg/IndexController.php
@@ -886,6 +911,10 @@ opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_0.php
 opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_2.php
 opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_3.php
 opnsense/mvc/app/models/OPNsense/Cron/Migrations/M1_0_4.php
+opnsense/mvc/app/models/OPNsense/CrowdSec/ACL/ACL.xml
+opnsense/mvc/app/models/OPNsense/CrowdSec/General.php
+opnsense/mvc/app/models/OPNsense/CrowdSec/General.xml
+opnsense/mvc/app/models/OPNsense/CrowdSec/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/DFConAg/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/DFConAg/DFConAg.php
 opnsense/mvc/app/models/OPNsense/DFConAg/DFConAg.xml
@@ -1187,6 +1216,8 @@ opnsense/mvc/app/views/OPNsense/Core/not_found.volt
 opnsense/mvc/app/views/OPNsense/Core/reboot.volt
 opnsense/mvc/app/views/OPNsense/Core/service.volt
 opnsense/mvc/app/views/OPNsense/Cron/index.volt
+opnsense/mvc/app/views/OPNsense/CrowdSec/general.volt
+opnsense/mvc/app/views/OPNsense/CrowdSec/overview.volt
 opnsense/mvc/app/views/OPNsense/DFConAg/index.volt
 opnsense/mvc/app/views/OPNsense/DFM/index.volt
 opnsense/mvc/app/views/OPNsense/DHCPv4/leases.volt
@@ -1395,6 +1426,7 @@ opnsense/scripts/OPNsense/CaptivePortal/strip_template.py
 opnsense/scripts/OPNsense/ClamAV/freshclam.sh
 opnsense/scripts/OPNsense/ClamAV/setup.sh
 opnsense/scripts/OPNsense/ClamAV/versions.sh
+opnsense/scripts/OPNsense/CrowdSec/reconfigure.py
 opnsense/scripts/OPNsense/HAProxy/exportCerts.php
 opnsense/scripts/OPNsense/HAProxy/exportErrorFiles.php
 opnsense/scripts/OPNsense/HAProxy/exportLuaScripts.php
@@ -1705,6 +1737,7 @@ opnsense/service/conf/actions.d/actions_cicap.conf
 opnsense/service/conf/actions.d/actions_clamav.conf
 opnsense/service/conf/actions.d/actions_configd.conf
 opnsense/service/conf/actions.d/actions_cron.conf
+opnsense/service/conf/actions.d/actions_crowdsec.conf
 opnsense/service/conf/actions.d/actions_ddclient.conf
 opnsense/service/conf/actions.d/actions_dfconag.conf
 opnsense/service/conf/actions.d/actions_dhcpd.conf
@@ -1795,6 +1828,11 @@ opnsense/service/templates/OPNsense/ClamAV/clamd.conf
 opnsense/service/templates/OPNsense/ClamAV/freshclam.conf
 opnsense/service/templates/OPNsense/Cron/+TARGETS
 opnsense/service/templates/OPNsense/Cron/user.cron
+opnsense/service/templates/OPNsense/CrowdSec/+TARGETS
+opnsense/service/templates/OPNsense/CrowdSec/crowdsec.rc.conf.d
+opnsense/service/templates/OPNsense/CrowdSec/crowdsec_firewall.rc.conf.d
+opnsense/service/templates/OPNsense/CrowdSec/oscrowdsec.rc.conf.d
+opnsense/service/templates/OPNsense/CrowdSec/settings.json
 opnsense/service/templates/OPNsense/DFConAg/+TARGETS
 opnsense/service/templates/OPNsense/DFConAg/rc.conf.d
 opnsense/service/templates/OPNsense/Filter/+TARGETS
@@ -2835,6 +2873,7 @@ opnsense/www/icons/yin-yang.svg
 opnsense/www/icons/zoom-in.svg
 opnsense/www/icons/zoom-out.svg
 opnsense/www/index.php
+opnsense/www/js/CrowdSec/crowdsec.js
 opnsense/www/js/Tokenize.LICENSE
 opnsense/www/js/bootstrap-datepicker.min.js
 opnsense/www/js/bootstrap-dialog.js
@@ -3228,12 +3267,3 @@ www/widgets/widgets/traffic_graphs.widget.php
 www/widgets/widgets/wireguard.widget.php
 www/wizard.php
 www/xmlrpc.php
-@sample etc/bogons.sample
-@sample etc/bogonsv6.sample
-@sample etc/config.xml.sample
-@sample opnsense/service/templates/OPNsense/IDS/custom.yaml.sample
-etc/pkg/repos/ntop.conf.sample
-etc/pkg/repos/Dynfi.conf.sample
-etc/pkg/repos/Dynfi-dev.conf.sample
-etc/pkg/repos/FreeBSD.conf.sample
-etc/pkg/repos/OPNsense.conf.sample
