@@ -571,8 +571,8 @@ MIRROR="$(mirror_abi)/sets"
 
 if [ -n "${DO_SIZE}" ]; then
 	if [ -n "${DO_BASE}" ]; then
-		BASE_SIZE=$(fetch -s ${MIRROR}/${BASESET} 2> /dev/null)
-		echo ${BASE_SIZE}
+		#BASE_SIZE=$(fetch -s ${MIRROR}/${BASESET} 2> /dev/null)
+		#echo ${BASE_SIZE}
 	elif [ -n "${DO_KERNEL}" ]; then
 		KERNEL_SIZE=$(fetch -s ${MIRROR}/${KERNELSET} 2> /dev/null)
 		echo ${KERNEL_SIZE}
@@ -793,6 +793,7 @@ if [ "${DO_PKGS}" = "-p" ]; then
 fi
 
 if [ "${DO_BASE}" = "-b" ]; then
+	return 0
 	if [ -z "${DO_FORCE}" -o -n "${DO_UPGRADE}" ]; then
 		rm -f ${VERSIONDIR}/base.lock
 	fi
@@ -838,18 +839,18 @@ if [ "${DO_PKGS}" = "-p" -a -n "${DO_UPGRADE}" ]; then
 fi
 
 if [ "${DO_BASE}" = "-b" -a -n "${DO_UPGRADE}" ]; then
-	echo -n "Extracting ${BASESET}..."
-
-	# clean up from a potential previous run
-	rm -rf ${PENDINGDIR}/base-*
-	mkdir -p ${PENDINGDIR}
-
-	# push pending base update to deferred
-	mv ${WORKDIR}/${BASESET} ${PENDINGDIR}
-
-	# add action marker for next run
-	echo ${RELEASE} > "${WORKPREFIX}/.base.pending"
-
+	#echo -n "Extracting ${BASESET}..."
+	#
+	## clean up from a potential previous run
+	#rm -rf ${PENDINGDIR}/base-*
+	#mkdir -p ${PENDINGDIR}
+	#
+	## push pending base update to deferred
+	#mv ${WORKDIR}/${BASESET} ${PENDINGDIR}
+	#
+	## add action marker for next run
+	#echo ${RELEASE} > "${WORKPREFIX}/.base.pending"
+	#
 	echo " done"
 fi
 
@@ -857,34 +858,34 @@ if [ "${DO_KERNEL}" = "-k" ]; then
 	install_kernel
 fi
 
-if [ -n "${DO_BASE}" -a -z "${DO_UPGRADE}" ]; then
-	if [ "${DO_BASE}" = "-B" ]; then
-		mkdir -p ${WORKDIR}/base-freebsd-version
-		tar -C${WORKDIR}/base-freebsd-version -xpf \
-		    ${WORKDIR}/${BASESET} ./bin/freebsd-version
-
-		BASE_VER=$(base_version ${WORKDIR}/base-freebsd-version)
-		KERNEL_VER=$(kernel_version)
-
-		BASE_VER=${BASE_VER%%-*}
-		KERNEL_VER=${KERNEL_VER%%-*}
-
-		if [ "${BASE_VER}" != "${KERNEL_VER}" ]; then
-			echo "Version number mismatch, aborting."
-			echo "    Kernel: ${KERNEL_VER}"
-			echo "    Base:   ${BASE_VER}"
-			# Clean all the pending updates, so that
-			# packages are not upgraded as well.
-			empty_cache
-			exit 1
-		fi
-	fi
-
-	install_base
-
-	# clean up deferred sets that could be there
-	rm -rf ${PENDINGDIR}/base-*
-fi
+#if [ -n "${DO_BASE}" -a -z "${DO_UPGRADE}" ]; then
+#	if [ "${DO_BASE}" = "-B" ]; then
+#		mkdir -p ${WORKDIR}/base-freebsd-version
+#		tar -C${WORKDIR}/base-freebsd-version -xpf \
+#		    ${WORKDIR}/${BASESET} ./bin/freebsd-version
+#
+#		BASE_VER=$(base_version ${WORKDIR}/base-freebsd-version)
+#		KERNEL_VER=$(kernel_version)
+#
+#		BASE_VER=${BASE_VER%%-*}
+#		KERNEL_VER=${KERNEL_VER%%-*}
+#
+#		if [ "${BASE_VER}" != "${KERNEL_VER}" ]; then
+#			echo "Version number mismatch, aborting."
+#			echo "    Kernel: ${KERNEL_VER}"
+#			echo "    Base:   ${BASE_VER}"
+#			# Clean all the pending updates, so that
+#			# packages are not upgraded as well.
+#			empty_cache
+#			exit 1
+#		fi
+#	fi
+#
+#	install_base
+#
+#	# clean up deferred sets that could be there
+#	rm -rf ${PENDINGDIR}/base-*
+#fi
 
 if [ "${DO_PKGS}" = "-P" -a -z "${DO_UPGRADE}" ]; then
 	install_pkgs
