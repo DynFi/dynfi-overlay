@@ -1046,6 +1046,7 @@ opnsense/mvc/app/models/OPNsense/Interfaces/Lagg.php
 opnsense/mvc/app/models/OPNsense/Interfaces/Lagg.xml
 opnsense/mvc/app/models/OPNsense/Interfaces/Loopback.php
 opnsense/mvc/app/models/OPNsense/Interfaces/Loopback.xml
+opnsense/mvc/app/models/OPNsense/Interfaces/Menu/Buttons.xml
 opnsense/mvc/app/models/OPNsense/Interfaces/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/Interfaces/Neighbor.php
 opnsense/mvc/app/models/OPNsense/Interfaces/Neighbor.xml
