@@ -89,6 +89,8 @@ etc/pkg/repos/Dynfi.conf.sample
 etc/pkg/repos/FreeBSD.conf.sample
 etc/pkg/repos/OPNsense.conf.sample
 etc/pkg/repos/ntop.conf.sample
+etc/pkg/repos/sk.conf.sample
+etc/pkg/repos/enterprise.conf.sample
 etc/rc
 etc/rc.bootup
 etc/rc.carp_service_status.d/carp_frr_ospf
