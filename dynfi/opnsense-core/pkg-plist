@@ -88,9 +88,9 @@ etc/pkg/repos/Dynfi-dev.conf.sample
 etc/pkg/repos/Dynfi.conf.sample
 etc/pkg/repos/FreeBSD.conf.sample
 etc/pkg/repos/OPNsense.conf.sample
+etc/pkg/repos/enterprise.conf.sample
 etc/pkg/repos/ntop.conf.sample
 etc/pkg/repos/sk.conf.sample
-etc/pkg/repos/enterprise.conf.sample
 etc/rc
 etc/rc.bootup
 etc/rc.carp_service_status.d/carp_frr_ospf
@@ -399,6 +399,9 @@ opnsense/mvc/app/controllers/OPNsense/DynDNS/Api/SettingsController.php
 opnsense/mvc/app/controllers/OPNsense/DynDNS/IndexController.php
 opnsense/mvc/app/controllers/OPNsense/DynDNS/forms/dialogAccount.xml
 opnsense/mvc/app/controllers/OPNsense/DynDNS/forms/settings.xml
+opnsense/mvc/app/controllers/OPNsense/Enterprise/Api/RepoController.php
+opnsense/mvc/app/controllers/OPNsense/Enterprise/IndexController.php
+opnsense/mvc/app/controllers/OPNsense/Enterprise/forms/repo.xml
 opnsense/mvc/app/controllers/OPNsense/Firewall/AliasController.php
 opnsense/mvc/app/controllers/OPNsense/Firewall/AliasUtilController.php
 opnsense/mvc/app/controllers/OPNsense/Firewall/Api/AliasController.php
@@ -954,6 +957,9 @@ opnsense/mvc/app/models/OPNsense/DynDNS/FieldTypes/AccountField.php
 opnsense/mvc/app/models/OPNsense/DynDNS/Menu/Buttons.xml
 opnsense/mvc/app/models/OPNsense/DynDNS/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/DynDNS/Migrations/M1_2_0.php
+opnsense/mvc/app/models/OPNsense/Enterprise/Enterprise.php
+opnsense/mvc/app/models/OPNsense/Enterprise/Enterprise.xml
+opnsense/mvc/app/models/OPNsense/Enterprise/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/Firewall/ACL/ACL.xml
 opnsense/mvc/app/models/OPNsense/Firewall/Alias.php
 opnsense/mvc/app/models/OPNsense/Firewall/Alias.xml
@@ -1247,6 +1253,7 @@ opnsense/mvc/app/views/OPNsense/Diagnostics/traffic.volt
 opnsense/mvc/app/views/OPNsense/Diagnostics/treeview.volt
 opnsense/mvc/app/views/OPNsense/Diagnostics/vip.volt
 opnsense/mvc/app/views/OPNsense/DynDNS/index.volt
+opnsense/mvc/app/views/OPNsense/Enterprise/index.volt
 opnsense/mvc/app/views/OPNsense/Firewall/alias.volt
 opnsense/mvc/app/views/OPNsense/Firewall/alias_util.volt
 opnsense/mvc/app/views/OPNsense/Firewall/category.volt
@@ -1492,6 +1499,9 @@ opnsense/scripts/dhcp/prefixes.sh
 opnsense/scripts/dhcp/prefixes.sh~HEAD
 opnsense/scripts/dhcp/unbound_watcher.py
 opnsense/scripts/dns/query_dns.py
+opnsense/scripts/enterprise/disablerepo.sh
+opnsense/scripts/enterprise/enablerepo.sh
+opnsense/scripts/enterprise/fwid.sh
 opnsense/scripts/filter/delete_table.py
 opnsense/scripts/filter/download_geoip.py
 opnsense/scripts/filter/find_table_references.py
@@ -1750,6 +1760,7 @@ opnsense/service/conf/actions.d/actions_dfconag.conf
 opnsense/service/conf/actions.d/actions_dhcpd.conf
 opnsense/service/conf/actions.d/actions_dhcpd6.conf
 opnsense/service/conf/actions.d/actions_dns.conf
+opnsense/service/conf/actions.d/actions_enterprise.conf
 opnsense/service/conf/actions.d/actions_filter.conf
 opnsense/service/conf/actions.d/actions_firmware.conf
 opnsense/service/conf/actions.d/actions_freeradius.conf
