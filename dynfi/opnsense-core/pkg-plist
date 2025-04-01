@@ -54,6 +54,7 @@ etc/inc/plugins.inc.d/openvpn/ovpn-linkdown
 etc/inc/plugins.inc.d/openvpn/ovpn-linkup
 etc/inc/plugins.inc.d/openvpn/tunnel_endpoint.php
 etc/inc/plugins.inc.d/openvpn/wizard.inc
+etc/inc/plugins.inc.d/opnproxy.inc
 etc/inc/plugins.inc.d/pf.inc
 etc/inc/plugins.inc.d/pfplugin.inc
 etc/inc/plugins.inc.d/redis.inc
@@ -590,10 +591,14 @@ opnsense/mvc/app/controllers/OPNsense/OpenVPN/forms/dialogCSO.xml
 opnsense/mvc/app/controllers/OPNsense/OpenVPN/forms/dialogInstance.xml
 opnsense/mvc/app/controllers/OPNsense/OpenVPN/forms/dialogStaticKey.xml
 opnsense/mvc/app/controllers/OPNsense/OpenVPN/forms/export_options.xml
+opnsense/mvc/app/controllers/OPNsense/Proxy/AclController.php
+opnsense/mvc/app/controllers/OPNsense/Proxy/Api/AclController.php
 opnsense/mvc/app/controllers/OPNsense/Proxy/Api/ServiceController.php
 opnsense/mvc/app/controllers/OPNsense/Proxy/Api/SettingsController.php
 opnsense/mvc/app/controllers/OPNsense/Proxy/Api/TemplateController.php
 opnsense/mvc/app/controllers/OPNsense/Proxy/IndexController.php
+opnsense/mvc/app/controllers/OPNsense/Proxy/forms/dialogCustomPolicy.xml
+opnsense/mvc/app/controllers/OPNsense/Proxy/forms/dialogDefaultPolicy.xml
 opnsense/mvc/app/controllers/OPNsense/Proxy/forms/dialogEditBlacklist.xml
 opnsense/mvc/app/controllers/OPNsense/Proxy/forms/dialogEditPACMatch.xml
 opnsense/mvc/app/controllers/OPNsense/Proxy/forms/dialogEditPACProxy.xml
@@ -823,6 +828,11 @@ opnsense/mvc/app/library/OPNsense/System/Status/CrashReporterStatus.php
 opnsense/mvc/app/library/OPNsense/System/Status/FirewallStatus.php
 opnsense/mvc/app/library/OPNsense/System/SystemStatus.php
 opnsense/mvc/app/library/OPNsense/Trust/Store.php
+opnsense/mvc/app/models/Deciso/Proxy/ACL.php
+opnsense/mvc/app/models/Deciso/Proxy/ACL.xml
+opnsense/mvc/app/models/Deciso/Proxy/FieldTypes/CustomPolicyField.php
+opnsense/mvc/app/models/Deciso/Proxy/FieldTypes/UserGroupField.php
+opnsense/mvc/app/models/Deciso/Proxy/Menu/Menu.xml
 opnsense/mvc/app/models/OPNsense/Base/BaseModel.php
 opnsense/mvc/app/models/OPNsense/Base/BaseModelMigration.php
 opnsense/mvc/app/models/OPNsense/Base/BaseValidator.php
@@ -1213,6 +1223,7 @@ opnsense/mvc/app/models/OPNsense/nProbe/License.php
 opnsense/mvc/app/models/OPNsense/nProbe/License.xml
 opnsense/mvc/app/models/OPNsense/nProbe/Menu/Buttons.xml
 opnsense/mvc/app/models/OPNsense/nProbe/Menu/Menu.xml
+opnsense/mvc/app/views/Deciso/Proxy/acl.volt
 opnsense/mvc/app/views/OPNsense/CICAP/general.volt
 opnsense/mvc/app/views/OPNsense/CaptivePortal/clients.volt
 opnsense/mvc/app/views/OPNsense/CaptivePortal/index.volt
@@ -1403,6 +1414,11 @@ opnsense/mvc/tests/app/models/OPNsense/Base/FieldTypes/VirtualIPFieldTest/config
 opnsense/mvc/tests/setup.php
 opnsense/scripts/Freeradius/generate_certs.php
 opnsense/scripts/Freeradius/setup.sh
+opnsense/scripts/OPNProxy/download_cleanse_ut1.py
+opnsense/scripts/OPNProxy/lib/__init__.py
+opnsense/scripts/OPNProxy/policies_to_redis_proto.py
+opnsense/scripts/OPNProxy/redis_sync_users.py
+opnsense/scripts/OPNProxy/squid_acl_helper.py
 opnsense/scripts/OPNsense/CICAP/setup.sh
 opnsense/scripts/OPNsense/CaptivePortal/allow.py
 opnsense/scripts/OPNsense/CaptivePortal/cp-background-process.py
@@ -1779,6 +1795,7 @@ opnsense/service/conf/actions.d/actions_nprobe.conf
 opnsense/service/conf/actions.d/actions_ntopng.conf
 opnsense/service/conf/actions.d/actions_openssh.conf
 opnsense/service/conf/actions.d/actions_openvpn.conf
+opnsense/service/conf/actions.d/actions_opnproxy.conf
 opnsense/service/conf/actions.d/actions_pfplugin.conf
 opnsense/service/conf/actions.d/actions_proxy.conf
 opnsense/service/conf/actions.d/actions_quagga.conf
@@ -1816,6 +1833,9 @@ opnsense/service/modules/processhandler.py
 opnsense/service/modules/session.py
 opnsense/service/modules/template.py
 opnsense/service/run_unittests.py
+opnsense/service/templates/Deciso/Proxy/+TARGETS
+opnsense/service/templates/Deciso/Proxy/10-opnproxy-ext.auth.conf
+opnsense/service/templates/Deciso/Proxy/proxy_policies.conf
 opnsense/service/templates/OPNsense/Auth/+TARGETS
 opnsense/service/templates/OPNsense/Auth/csh.cshrc
 opnsense/service/templates/OPNsense/Auth/ipsec.pam
