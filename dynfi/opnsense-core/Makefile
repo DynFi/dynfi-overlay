@@ -27,10 +27,10 @@ RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss \
 		opie>=0:security/opie \
 		filterlog>=0:dynfi/filterlog \
 		ifinfo>=0:dynfi/ifinfo \
+		dhcrelay>=0:dynfi/dhcrelay \
 		flock>=0:sysutils/flock \
 		flowd>=0:net-mgmt/flowd \
 		hostapd>=0:net/hostapd \
-		isc-dhcp44-relay>=0:net/isc-dhcp44-relay \
 		isc-dhcp44-server>=0:net/isc-dhcp44-server \
 		lighttpd>=0:www/lighttpd \
 		monit>=0:sysutils/monit \
