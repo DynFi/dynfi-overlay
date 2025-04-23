@@ -7,7 +7,7 @@ DISTFILES=
 PLIST=           ${.CURDIR}/pkg-plist
 
 
-PORTVERSION=10.3.230218
+PORTVERSION=10.7.250422
 RUN_DEPENDS= hiredis>0:databases/hiredis \
 	     json-c>0:devel/json-c \
 	     libmaxminddb>0:net/libmaxminddb \
