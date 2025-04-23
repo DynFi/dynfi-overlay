@@ -31,7 +31,6 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		dynfi-confs>=0:dynfi/dynfi-confs \
 		dynfi-lcdd>=0:dynfi/dynfi-lcdd \
 		dynfi-rpz>=0:dynfi/dynfi-rpz \
-		n2disk>=0:dynfi/n2disk \
 		nprobe>=0:dynfi/nprobe \
 		ntopng>=0:dynfi/ntopng \
 		freeradius3>0:net/freeradius3 \
