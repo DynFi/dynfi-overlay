@@ -7,7 +7,7 @@ DISTFILES=
 MAINTAINER=	oshogbo@DynFi.com
 COMMENT=	Package agregating all the packages required to run DynFi Firewall
 
-LICENSE=	BSD2CLAUSE
+LICENSE=	AGPLv3
 
 RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		iperf3>=0:benchmarks/iperf3 \
