@@ -51,6 +51,9 @@ PENDINGDIR="${WORKPREFIX}/.sets.pending"
 PIPEFILE="${WORKPREFIX}/.upgrade.pipe"
 LOGFILE="${WORKPREFIX}/.upgrade.log"
 ORIGIN="${REPOSDIR}/${PRODUCT}.conf"
+if [ -f "${REPOSDIR}/enterprise.conf" ]; then
+    ORIGIN="${REPOSDIR}/enterprise.conf"
+fi
 WORKDIR="${WORKPREFIX}/${$}"
 
 IDENT=$(sysctl -n kern.ident)
