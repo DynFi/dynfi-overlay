@@ -18,7 +18,7 @@ RUN_DEPENDS=	aquantia-atlantic-kmod>=0:net/aquantia-atlantic-kmod \
 		rspamd>=0:mail/rspamd \
 		net-snmp>=0:net-mgmt/net-snmp \
 		nrpe>=0:net-mgmt/nrpe \
-		zabbix5-agent>=0:net-mgmt/zabbix5-agent \
+		zabbix6-agent>=0:net-mgmt/zabbix6-agent \
 		freeradius3>=0:net/freeradius3 \
 		frr8>=0:net/frr8 \
 		haproxy>=0:net/haproxy \
